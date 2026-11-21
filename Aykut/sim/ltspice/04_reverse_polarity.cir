@@ -1,0 +1,21 @@
+* EE463 60 W sync buck - Step 4: input reverse-polarity protection (optional add-on) (LTspice)
+* Low-side N-MOSFET BSC040N08NS5: drain -> VIN- terminal, source -> circuit ground,
+* gate -> VIN+ through 100 k, 12 V Zener gate clamp. Converter = input capacitors + 60 W equivalent load (37 ohm).
+.step param VIN list 48 -48 20 -20
+Vin   vpos_s vneg_t {VIN}
+Rsrc  vpos_s vpos 30m
+Mrp   vneg_t g 0 0 BSC040
+Rg    vpos g 100k
+Dz    0 g DZ12
+Ccin  vpos 0 4u
+Celin vpos nel 100u
+Rel   nel 0 0.2
+Rconv vpos 0 37
+.model DZ12 D(Is=1e-12 N=1 BV=12 IBV=5m Rs=5)
+.model BSC040 VDMOS(Rg=1.2 Rd=4.5m Rs=0.3m Vto=3.0 Kp=150 Lambda=0.01 Cgdmax=1n Cgdmin=30p A=0.5 Cgs=3n Cjo=3.5n VJ=0.7 M=0.5 Is=1p N=1.05 Rb=2m TT=10n BV=80)
+.tran 0 3m 0 1u
+.meas tran Iin   AVG -I(Vin)        FROM 2.5m TO 3m
+.meas tran Vgs   AVG V(g)           FROM 2.5m TO 3m
+.meas tran Vds   AVG V(vneg_t)      FROM 2.5m TO 3m
+.meas tran Vconv AVG V(vpos)        FROM 2.5m TO 3m
+.end

@@ -1,0 +1,27 @@
+* EE463 60 W sync buck - Step 1: ideal power stage, open loop, fixed duty cycle
+* Purpose: verify inductor ripple, peak current and output ripple against the hand calculations.
+* Run:  ngspice -b 01_powerstage_ideal.cir   (VIN and D are set in the .control block)
+.param VIN=48 D=0.25 FSW=200k
+.param TS={1/FSW}
+
+Vin  vin 0 {VIN}
+* complementary ideal switches driven by a PWM pulse (no dead time)
+Vpwm pwm 0 PULSE(0 1 0 1n 1n {D*TS} {TS})
+Bpwmn pwmn 0 V=1-V(pwm)
+Shs  vin sw  pwm  0 SWI
+Sls  sw  0   pwmn 0 SWI
+.model SWI SW(Ron=1m Roff=1e7 Vt=0.5 Vh=0)
+
+L1   sw  nl  22u IC=5
+RL   nl  nl2 7m
+Rsen nl2 vout 6m
+* output capacitors: 4 x 22 uF ceramic (40 uF effective) + 100 uF polymer
+Ccer vout nc1 40u IC=0
+Rcer nc1 0 0.75m
+Cpol vout np1 100u IC=0
+Rpol np1 0 25m
+Rload vout 0 2.4
+
+.ic V(vout)=12 V(nc1)=0 V(np1)=0
+.tran 5n 8m 7.5m 5n uic
+.end

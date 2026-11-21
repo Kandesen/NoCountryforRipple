@@ -1,0 +1,26 @@
+* EE463 60 W sync buck - Step 1: ideal power stage, open loop, fixed duty cycle (LTspice)
+* Verifies inductor ripple, peak current and output ripple against the hand calculations.
+.param FSW=200k TS={1/FSW}
+.param D={(12 + 5*0.014)/VIN}
+.step param VIN list 20 24 36 48
+Vin  vin 0 {VIN}
+Vpwm pwm 0 PULSE(0 1 0 1n 1n {D*TS} {TS})
+Bpwmn pwmn 0 V=1-V(pwm)
+Shs  vin sw  pwm  0 SWI
+Sls  sw  0   pwmn 0 SWI
+.model SWI SW(Ron=1m Roff=1e7 Vt=0.5 Vh=0)
+L1   sw  nl  22u
+RL   nl  nl2 7m
+Rsen nl2 vout 6m
+Ccer vout nc1 40u
+Rcer nc1 0 0.75m
+Cpol vout np1 100u
+Rpol np1 0 30m
+Rload vout 0 2.4
+.ic V(vout)=12 I(L1)=5
+.tran 0 8m 7.5m 5n uic
+.meas tran Vout_avg AVG V(vout) FROM 7.8m TO 8m
+.meas tran Vout_pp  PP  V(vout) FROM 7.8m TO 8m
+.meas tran IL_pp    PP  I(L1)   FROM 7.8m TO 8m
+.meas tran IL_max   MAX I(L1)   FROM 7.8m TO 8m
+.end

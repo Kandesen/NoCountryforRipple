@@ -1,0 +1,124 @@
+* EE463 60 W sync buck - Step 2: closed loop, behavioural LTC7801 + non-ideal power stage
+* Controller model (from the LTC7801 datasheet): 200 kHz clock, peak current mode,
+*   gm = 2 mS error amp, VREF 0.8 V with soft start (10 uA into CSS), VSENSE(max) 75 mV,
+*   foldback to 40 % below 70 % VOUT, 80 ns minimum on-time (leading-edge blanking),
+*   55 / 50 ns dead times, TG 2.2/1.0 ohm, BG 2.0/1.0 ohm drivers, bootstrap from DRVCC = 10 V.
+* ASSUMED (not in the datasheet): ITH 0.45 V -> 0 mV, 2.2 V -> 75 mV; slope comp 50 % of down-slope.
+* Power stage: BSC117N08NS5 VDMOS models (hot RDS(on)), 22 uH / 8.7 mOhm, 6 mOhm sense,
+*   4 x 22 uF ceramic + 100 uF polymer out, 4 x 2.2 uF ceramic + 100 uF electrolytic in, 1 uH lab leads.
+.param VIN=48 FSW=200k
+.param TS={1/FSW}
+
+*---------------- input: lab supply + leads + input capacitors ----------------
+Vin   vsrc 0 {VIN}
+Rsrc  vsrc nlead 30m
+Lsrc  nlead vin 1u
+Ccin  vin ncin 4u
+Rcin  ncin 0 2m
+Celin vin nel 100u
+Rel   nel 0 0.2
+
+*---------------- power stage ----------------
+M1 vin tg sw BSC117
+M2 sw  bg 0  BSC117
+L1   sw nl 22u
+RL   nl nsp 8.7m
+Rsen nsp vout 6m
+Ccer vout nc1 40u
+Rcer nc1 0 0.75m
+Cpol vout np1 100u
+Rpol np1 0 25m
+* load: 2.4 ohm (5 A); 4.8 ohm half is switched off between 3.5 and 4.25 ms (5 A -> 2.5 A -> 5 A)
+Rld1  vout 0 4.8
+Rld2  vout nld 4.8
+Sld   nld 0 ldon 0 SLD
+Vldon ldon 0 PULSE(1 0 3.5m 1u 1u 0.75m 10)
+.model SLD SW(Ron=1m Roff=1e7 Vt=0.5 Vh=0)
+
+*---------------- feedback divider ----------------
+RB vout fb 140k
+RA fb 0 10k
+
+*---------------- gate drivers (DRVCC = 10 V from EXTVCC) ----------------
+Vdrv  drvcc 0 10
+Dbst  drvcc boost DBOOT
+Cbst  boost sw 100n
+Stgu  boost tg tg_a  0 STGU
+Stgd  tg    sw tgn_a 0 STGD
+Sbgu  drvcc bg bg_a  0 SBGU
+Sbgd  bg    0  bgn_a 0 SBGD
+Btgn  tgn_a 0 V=1-V(tg_a)
+Bbgn  bgn_a 0 V=1-V(bg_a)
+.model DBOOT D(Is=1e-12 N=1 Rs=11)
+.model STGU SW(Ron=2.2 Roff=10Meg Vt=0.5 Vh=0.05)
+.model STGD SW(Ron=1.0 Roff=10Meg Vt=0.5 Vh=0.05)
+.model SBGU SW(Ron=2.0 Roff=10Meg Vt=0.5 Vh=0.05)
+.model SBGD SW(Ron=1.0 Roff=10Meg Vt=0.5 Vh=0.05)
+
+*---------------- current sense filter (10 ohm + 1 nF) ----------------
+Rsf1 nsp sp 10
+Rsf2 vout sn 10
+Csf  sp sn 1n
+
+*---------------- controller: soft start, error amp, ITH network ----------------
+Iss   0 ss 10u
+Css   ss 0 22n
+Dssc  ss sscl DCL
+Vsscl sscl 0 1.2
+Bvref vref 0 V=min(V(ss),0.8)
+Bea   0 ith I=60u*tanh((V(vref)-V(fb))*2m/60u)
+Rc    ith nrc 10k
+Cc    nrc 0 6.8n
+Cc2   ith 0 150p
+Dith  ith ithcl DCL
+Vithc ithcl 0 2.4
+Dithl 0 ith DCL
+.model DCL D(Is=1e-14 N=1)
+
+*---------------- controller: current comparator, slope comp, foldback ----------------
+Vramp ramp 0 PULSE(0 8.2m 0 {TS-2n} 1n 0 {TS})
+Bff   ff   0 V=(V(ss)<0.9) ? 1 : max(0.4, min(1, 0.4+0.6*V(fb)/0.56))
+Bthr  vthr 0 V=min((V(ith)-0.45)*(0.075/1.75) - V(ramp), 0.075*V(ff))
+* comparator (smooth, 10 uV transition) and 40 ns set clock; the logic threshold band is +/-0.1 mV wide
+Bcmp  cmp_a 0 V=0.5+0.5*tanh(((V(sp)-V(sn))-V(vthr))*1e5)
+* feedback overvoltage protection (datasheet: VFB > +10 % -> top MOSFET held off)
+Bovp  ovp_a 0 V=0.5+0.5*tanh((V(fb)-0.88)*1e5)
+Vclk  clk_a 0 PULSE(0 1 0 1n 1n 40n {TS})
+
+*---------------- controller: PWM logic (XSPICE digital) ----------------
+.model adc1 adc_bridge(in_low=0.4999 in_high=0.5001 rise_delay=1n fall_delay=1n)
+.model dac1 dac_bridge(out_low=0 out_high=1 out_undef=0 t_rise=2n t_fall=2n)
+.model srl  d_srlatch(rise_delay=1n fall_delay=1n)
+.model inv1 d_inverter(rise_delay=1n fall_delay=1n)
+.model and2 d_and(rise_delay=1n fall_delay=1n)
+.model bld  d_buffer(rise_delay=80n fall_delay=1n)
+.model dtg  d_buffer(rise_delay=50n fall_delay=1n)
+.model dbg  d_inverter(rise_delay=55n fall_delay=1n)
+.model pu   d_pullup(load=1p)
+.model pd   d_pulldown(load=1p)
+Aclk  [clk_a cmp_a ovp_a] [clk_d cmp_d ovp_d] adc1
+.model or2 d_or(rise_delay=1n fall_delay=1n)
+.model and3 d_and(rise_delay=1n fall_delay=1n)
+Apu   en_d  pu
+Apd   zro_d pd
+Ablk  q_d qbl_d bld
+Arst0 [cmp_d qbl_d] rst0_d and2
+Arst  [rst0_d ovp_d] rst_d or2
+Aovn  ovp_d ovpn_d inv1
+* a new cycle starts only if the current is below the threshold (cycle skipping; avoids S=R=1)
+Acmn  cmp_d cmpn_d inv1
+Aset  [clk_d cmpn_d ovpn_d] set_d and3
+Alat  set_d rst_d en_d zro_d zro_d q_d qn_d srl
+Atg   q_d tg_d dtg
+Abg   q_d bg_d dbg
+Adac  [tg_d bg_d] [tg_a bg_a] dac1
+
+*---------------- MOSFET model: Infineon BSC117N08NS5 (approximation, hot RDS(on) ~13.9 mOhm) ----------------
+.model BSC117 VDMOS(Rg=1.1 Rd=11m Rs=0.5m Vto=3.0 Kp=60 Lambda=0.01
++ Cgdmax=0.45n Cgdmin=12p a=0.5 Cgs=0.95n
++ Cjo=1.3n Vj=0.7 M=0.5 Is=1e-12 N=1.05 Rb=4m TT=5n BV=80)
+
+.options method=gear reltol=2e-3 abstol=1e-8 vntol=1e-5 itl4=200
+.ic v(ss)=0 v(ith)=0 v(vout)=0
+.tran 5n 5m 0 10n
+.end

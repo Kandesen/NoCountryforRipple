@@ -1,0 +1,92 @@
+=== 1. Switching-frequency sweep (L = 22 uH, 5 A) ===
+  f = 150 kHz  avg eta =  97.49 %  bonus = 17.49  dI@48V = 2.73 A (55 %)
+  f = 200 kHz  avg eta =  97.29 %  bonus = 17.29  dI@48V = 2.05 A (41 %)
+  f = 250 kHz  avg eta =  97.07 %  bonus = 17.07  dI@48V = 1.64 A (33 %)
+  f = 300 kHz  avg eta =  96.84 %  bonus = 16.84  dI@48V = 1.36 A (27 %)
+  f = 350 kHz  avg eta =  96.61 %  bonus = 16.61  dI@48V = 1.17 A (23 %)
+  f = 400 kHz  avg eta =  96.37 %  bonus = 16.37  dI@48V = 1.02 A (20 %)
+
+=== 2. Low-side MOSFET choice at 200 kHz ===
+  LS = BSC117N08NS5: avg eta 5 A = 97.29 %, 7.5 A = 96.77 %
+  LS = BSC040N08NS5: avg eta 5 A = 97.19 %, 7.5 A = 96.86 %
+
+=== 3. Operating points (f = 200 kHz, 5 A) ===
+                                           20 V       24 V       36 V       48 V
+  duty cycle                              0.600      0.500      0.333      0.250
+  inductor ripple [A pp]                  1.091      1.364      1.818      2.045
+  inductor peak [A]                       5.545      5.682      5.909      6.023
+  inductor RMS [A]                        5.010      5.015      5.027      5.035
+  input-cap RMS [A]                       2.462      2.515      2.376      2.185
+  input current [A]                       3.073      2.563      1.715      1.291
+  --- losses [W] ---
+  HS conduction                           0.210      0.175      0.117      0.088
+  HS switching (V-I overlap)              0.126      0.151      0.224      0.297
+  Coss (HS+LS)                            0.054      0.071      0.130      0.200
+  LS reverse recovery                     0.099      0.117      0.170      0.224
+  LS conduction                           0.140      0.175      0.235      0.265
+  Dead-time body diode                    0.084      0.085      0.085      0.085
+  Gate drive                              0.067      0.067      0.067      0.067
+  Controller bias                         0.030      0.030      0.030      0.030
+  Inductor DCR                            0.218      0.218      0.219      0.220
+  Inductor core (estimate)                0.027      0.047      0.097      0.130
+  Sense resistor                          0.151      0.151      0.152      0.152
+  Cin + Cout ESR                          0.005      0.005      0.004      0.004
+  Output connector + copper               0.150      0.150      0.150      0.150
+  UVLO/OVLO divider                       0.000      0.001      0.001      0.002
+  Current-limit circuit (optional)        0.014      0.014      0.014      0.014
+  Input connector + copper                0.052      0.036      0.016      0.009
+  Reverse-polarity FET (optional)         0.040      0.030      0.021      0.024
+  TOTAL                                   1.467      1.522      1.732      1.961
+  Efficiency [%]                          97.61      97.53      97.19      96.83
+  average efficiency = 97.29 %  ->  efficiency bonus ~ +17.3 points
+  (base converter without the two optional add-ons: 97.36 %)
+
+=== 4. Overload 7.5 A (f = 200 kHz) ===
+  Vin = 20 V  eta = 96.98 %  Ploss = 2.80 W  Ipk = 8.05 A  Iin = 4.64 A
+  Vin = 24 V  eta = 96.94 %  Ploss = 2.84 W  Ipk = 8.18 A  Iin = 3.87 A
+  Vin = 36 V  eta = 96.71 %  Ploss = 3.06 W  Ipk = 8.41 A  Iin = 2.58 A
+  Vin = 48 V  eta = 96.44 %  Ploss = 3.33 W  Ipk = 8.52 A  Iin = 1.94 A
+
+=== 5. Current sensing / built-in limit ===
+  RSENSE(max) for 7.5 A = 7.74 mOhm -> chosen 6 mOhm
+  peak current limit min/typ/max = 11.0 / 12.5 / 14.0 A  (inductor Isat 18 A)
+  short-circuit current (foldback, datasheet formula) ~ 5.5 A
+
+=== 6. Output / input ripple ===
+  Vin = 20 V  dI = 1.09 A  Vout ripple ~  15.2 mV pp (limit 120)  Vin ripple (ceramic only) ~ 1.50 V pp
+  Vin = 24 V  dI = 1.36 A  Vout ripple ~  19.0 mV pp (limit 120)  Vin ripple (ceramic only) ~ 1.56 V pp
+  Vin = 36 V  dI = 1.82 A  Vout ripple ~  25.3 mV pp (limit 120)  Vin ripple (ceramic only) ~ 1.39 V pp
+  Vin = 48 V  dI = 2.05 A  Vout ripple ~  28.5 mV pp (limit 120)  Vin ripple (ceramic only) ~ 1.17 V pp
+
+=== 7. Component stresses ===
+  MOSFET VDS: 48 V + 25 % ringing = 60 V vs 80 V rating
+  Inductor at 7.5 A, 48 V: Ipk = 8.52 A, Irms = 7.52 A (rated 15 A, Isat 18 A)
+  Cin RMS current (D = 0.5): 2.50 A at 5 A, 3.75 A at 7.5 A
+  Input current at 20 V: 3.07 A (5 A out), 4.64 A (7.5 A out)
+
+=== 8. MOSFET junction temperatures (RthJA ~ 40 K/W, Ta = 30 C) ===
+  Io = 5.0 A, Vin = 20 V: P_HS = 0.41 W (Tj ~ 46 C), P_LS = 0.22 W (Tj ~ 39 C)
+  Io = 5.0 A, Vin = 48 V: P_HS = 0.60 W (Tj ~ 54 C), P_LS = 0.35 W (Tj ~ 44 C)
+  Io = 7.5 A, Vin = 20 V: P_HS = 0.75 W (Tj ~ 60 C), P_LS = 0.44 W (Tj ~ 48 C)
+  Io = 7.5 A, Vin = 48 V: P_HS = 0.89 W (Tj ~ 66 C), P_LS = 0.72 W (Tj ~ 59 C)
+
+=== 9. Feedback divider and Type II compensation ===
+  VOUT = 0.8*(1+RB/RA) = 12.000 V  (RA = 10.0k, RB = 140k, 0.1 %)
+  worst case (VFB 0.788-0.812 V, 0.1 % resistors): 11.798 - 12.203 V  (spec 11.76-12.24 V)
+  assumed Gcs = 7.14 A/V (to be confirmed in simulation)
+  fc = 15 kHz -> RC = 13.9 k, CC = 3.83 nF, CC2 = 115 pF
+
+=== 10. UVLO / OVLO divider ===
+  RUN on = 17.0 V, off = 15.9 V;  OVLO trip = 55.6 V, release = 50.9 V
+
+=== 11. Optional constant-current limit (INA180A1, gain 20) ===
+  TLV431 rail = 4.97 V (also supplies INA180)
+  setpoint 10.0k / 1.54k -> 0.664 V -> limit 5.53 A
+  setpoint 10.0k / 2.37k -> 0.953 V -> limit 7.94 A
+  injection to pull VOUT to 0 V: 86 uA -> R_inj <= 83 k (22 k chosen)
+
+=== 12. Reverse-polarity MOSFET (low side, BSC040N08NS5) ===
+  Vin = 20 V: Iin = 3.07 A, P = 40 mW
+  Vin = 24 V: Iin = 2.56 A, P = 30 mW
+  Vin = 36 V: Iin = 1.71 A, P = 21 mW
+  Vin = 48 V: Iin = 1.29 A, P = 24 mW
