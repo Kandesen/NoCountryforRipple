@@ -24,6 +24,12 @@ Every part has `MPN`, `Manufacturer` and `Fit`. `Fit` is one of: Base, Add-on 1 
 - **Gate drive:** U1 → R2/R3 (0 Ω, change to a few Ω to slow the edges) → vias next to the Q1/Q2 gate pads. R2 sits directly above the gate-driver pins and R3 on the direct line towards Q2; test points TP4 (TG) and TP5 (BG) are next to them. Controller pin to MOSFET gate: TG about 29 mm (the straight line is 22 mm, because Q1 is at the far end of the power stage), BG about 21 mm. The TG track runs on In2 next to its SW return for most of its length. D3 (optional bootstrap diode, not fitted) was moved above the controller to make room for R3.
 - **DRC (KiCad 7):** no clearance errors, no unconnected items. No silkscreen overlaps. The only remaining items are "library footprint" notices that only appear because the generator did not have your library paths.
 
+## Sourcing
+- **Checked on 22 Nov 2026:** every part number in the BOM is active and in stock at Mouser (or Digi-Key). The exception is **L1 (Würth 74435582200)**: Mouser shows 0 in stock with 3,543 due on 11 Dec 2026, so order it first (or check Digi-Key stock on the day).
+- Parts replaced in this check because they were end-of-life, not recommended for new designs, or out of stock at both distributors: Murata GRM32ER72A225KA35L, GRM21BR71H223KA01L, GRM21BR71H682KA01L, GRM2165C1H151JA01D, GRM2165C1H102JA01D, GRM2195C1H103JA01D; Diodes BZT52C12-7-F → Comchip BZT52B12-HF; BAT46W-7-F → ST BAT46ZFILM; INA180A1IDBVR (reel) → INA180A1IDBVT (small reel, same chip); Samsung CL32B226KAJNNNE / CL31B106KAHNNNE / CL21B104KCFNNNE as primary (out of stock at Digi-Key/Mouser) → KEMET / Yageo, with the Samsung parts kept as the Özdisan option.
+- The BOM gives, for every line, the Mouser/Digi-Key stock and the **Özdisan part and stock**. Royalohm 0805S8F… (1 %, thick film, 0805) resistors are a valid substitute for the Yageo RC0805FR parts; Özdisan sells them in multiples of 100.
+- Not available at Özdisan: U1, L1, R5, C1, C2–C5/C11/C12, C10, C19, J1/J2, D1, U2, U4, and the resistors R8/R9 (0.1 %), R12 (1.02 MΩ) and R13 (53.6 kΩ). If R12/R13 must come from Özdisan, 1 MΩ / 56 kΩ (both stocked as Royalohm) would move the UV/OV thresholds to about 16.3 V / 54.7 V; this is not applied.
+
 ## What has been verified
 - **Schematic ↔ intended design:** KiCad's exported netlist was compared pin by pin with the intended netlist (191 pins, no differences). The intended netlist was reviewed net by net against the design.
 - **Pinouts checked against datasheets:**
@@ -36,12 +42,12 @@ Every part has `MPN`, `Manufacturer` and `Fit`. `Fit` is one of: Base, Add-on 1 
 - **DRC (KiCad 7.0.11):** no clearance errors, no unconnected items.
 - **Copper continuity:** the VIN, VIN_N, SW, SNSP and VOUT copper each fill as one island. In1, In2 and B.Cu GND are each one island.
 - **Kelvin sensing:** the sense traces from inside the R5 pads connect only to R6/R7 and U2. No other VOUT/SNSP copper touches them, so no load current flows in the sense lines.
-- **Cost:** about 48 USD for one fully populated board at single-unit prices (Base 41, add-on 1 4, add-on 2 3); see the BOM totals.
+- **Cost:** about 45 USD for one fully populated board at single-unit prices (Base 39.4, add-on 1 2.7, add-on 2 2.8); see the BOM totals.
 
 ## Known points to improve or check interactively
 - **Gate drive and ringing:** the gate paths were shortened on 22 Nov (TG about 34 → 29 mm, BG 28 → 21 mm). If the switch node rings too much on the bench (TP3, 48 V, full load), first increase R2/R3 to 2.2–4.7 Ω, then fit the R4/C13 snubber (2.2 Ω, 330 pF C0G; R4 dissipates about 0.15 W at 48 V).
-- **DRVCC capacitor C16** is about 10 mm of track from U1 pin 17. The datasheet asks for it right next to the pin, because it supplies the gate-driver current pulses. Moving it closer means rearranging the capacitor column left of U1 (C15–C18, C22); this is the next layout improvement before the 30 Nov submission.
-- **Silkscreen:** every label is placed clear of pads and other labels. Five small parts next to the controller (C19, C20, C21, C28, R19) had no free space for a label, so their labels are hidden on the board; `docs/assembly_top.pdf` shows all references.
+- **Decoupling at U1:** C16 (DRVCC, 10 µF) now sits left of the controller with about 4 mm of track to pins 17/18 (was about 10 mm), and C15 (VIN, 100 nF) about 4 mm from pin 19 (was 7.6 mm). Moved on 22 Nov; DRC clean.
+- **Silkscreen:** every label is placed clear of pads and other labels. Six small parts next to the controller (C15, C19, C20, C21, C28, R19) had no free space for a label, so their labels are hidden on the board; `docs/assembly_top.pdf` shows all references.
 - **Vias in the R5 pads:** the Kelvin vias sit inside R5's pads, so a little solder may wick into them. Use enough paste on R5.
 
 ## Before ordering (in KiCad 10)
