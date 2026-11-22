@@ -1,0 +1,9 @@
+# KiCad local history (a separate git repository KiCad keeps for undo across sessions)
+.history/
+# KiCad backups, lock files and caches
+*-backups/
+_autosave-*
+*.lck
+~*.lck
+fp-info-cache
+*.bak
