@@ -1,0 +1,12 @@
+# LTspice / ngspice output files: regenerated on every run, can be hundreds of MB
+*.raw
+*.log
+*.net
+*.op.raw
+*.fft
+*.plt
+*.asc.bak
+*.tmp
+# keep the small step-1 reference results that are already in the repository
+!ltspice/01_powerstage_ideal.raw
+!ltspice/01_powerstage_ideal.log

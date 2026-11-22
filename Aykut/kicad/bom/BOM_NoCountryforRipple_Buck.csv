@@ -49,16 +49,18 @@ D3,1,0,1,BAT46,"100 V, 150 mA",D_SOD-123,STMicroelectronics,BAT46ZFILM,DNP (ext.
 JP1,1,0,1,0R,"0 Ohm metal strip, 100 A",R_2512_6332Metric,Bourns,CRF2512-J/-000ELF,Fit only without add-on 1,No (DNP),Mouser,same part,0.72,0.72,,Bourns CRF2512-JZ-R005ELF (5 mOhm metal strip) as substitute,"6,516 (abroad)",0.84,-,not stocked (thick-film 2512 jumpers only),"Mouser 14,257",https://www.digikey.com/en/products/result?keywords=CRF2512-J/-000ELF,https://www.mouser.com/c/?q=CRF2512-J/-000ELF,"metal-strip jumper, 100 A max (thick-film 0R parts are rated 2 A)"
 R4,1,0,1,2.2R,"5 %, 0.25 W",R_1206_3216Metric,Yageo,RC1206JR-072R2L,DNP (snubber option),No (DNP),EKOM,same part,0.19,0.19,,same part,247 (abroad),0.19,Royalohm CQ06S4F220KT5E (1 %),"29,542","Mouser 13,199",https://www.digikey.com/en/products/result?keywords=RC1206JR-072R2L,https://www.mouser.com/c/?q=RC1206JR-072R2L,
 R11,1,0,1,0R,"0 Ohm jumper, 2 A",R_0805_2012Metric,Yageo,RC0805JR-070RL,DNP (EXTVCC fallback),No (DNP),EKOM,same part,0.12,0.12,,same part,"1,949,180 (abroad)",0.12,Royalohm 0805S8J0000T5E,in stock (MOQ 100),"Mouser 1,815,001",https://www.digikey.com/en/products/result?keywords=RC0805JR-070RL,https://www.mouser.com/c/?q=RC0805JR-070RL,
+R28 (alternative),0,2,2,2.37k,"1 %, 0.125 W",R_0805_2012Metric,Yageo,RC0805FR-072K37L,Add-on 2 (bench setting of the limit),No (alternative value),EKOM,same part,0.12,0.24,,same part,"86,739 (abroad)",0.12,-,-,"Mouser (Yageo RC0805, stocked)",https://www.digikey.com/en/products/result?keywords=RC0805FR-072K37L,https://www.mouser.com/c/?q=RC0805FR-072K37L,7.94 A limit (6 % above 7.5 A)
+R28 (alternative),0,2,2,2.32k,"1 %, 0.125 W",R_0805_2012Metric,Royalohm,0805S8F2321T5E,Add-on 2 (bench setting of the limit),No (alternative value),Ozdisan,same part,0.10,0.20,"est. (Mouser price), MOQ 100",-,not listed,,same part,"19,885",- (Royalohm not sold by Mouser/Digi-Key),https://www.digikey.com/en/products/result?keywords=0805S8F2321T5E,https://www.mouser.com/c/?q=0805S8F2321T5E,7.80 A limit (4 % above 7.5 A)
 
 "Approx. totals (one board set, single-unit prices, USD excl. VAT)"
 Base,,,,,,,,,,,,,,61.60
 Add-on 1,,,,,,,,,,,,,,4.13
 Add-on 2,,,,,,,,,,,,,,5.50
 Not fitted by default,,,,,,,,,,,,,,1.67
-Spares,,,,,,,,,,,,,,21.62
-Whole order,,,,,,,,,,,,,,94.52
+Spares,,,,,,,,,,,,,,22.06
+Whole order,,,,,,,,,,,,,,94.96
 
 By supplier (incl. spares and parts not fitted by default)
-EKOM,,,,,,,,,,,,,,61.16
-Ozdisan,,,,,,,,,,,,,,2.16
+EKOM,,,,,,,,,,,,,,61.40
+Ozdisan,,,,,,,,,,,,,,2.36
 Mouser,,,,,,,,,,,,,,31.20
