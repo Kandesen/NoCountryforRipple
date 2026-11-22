@@ -29,13 +29,13 @@ Every part has `MPN`, `Manufacturer` and `Fit`. `Fit` is one of: Base, Add-on 1 
 - **EKOM:** most of its stock is Digi-Key stock shipped from abroad (7–10 working days, estimated dispatch 1–7 Dec 2026); the price includes shipping and customs. Only R25 (RC0805FR-0730K1L) was in stock in Turkey (1–3 days). Prices in the BOM are EKOM's 1-piece USD price without the 20 % VAT (the TL price on the site includes VAT).
 - **What the BOM orders:** every part, including the ones not fitted by default (D3, JP1, R4, C13, R11), plus a limited set of spares that keeps the order under the 100 USD budget. "Qty per board" is the fitted quantity, "Spares" the extra pieces and "Qty to order" their sum.
 - **Spares and why:** one LTC7801 (hardest part to hand-solder without a stencil, longest lead time); one BSC117N08NS5 (Q1/Q2 are the most likely to fail during bring-up); one LM2904B and one 1N4148W (cheap); one of every 0805 resistor and capacitor in a fitted position, once per part number (easily lost when hand-soldering). No spares for L1, R5, the 1206/1210 capacitors, C1, C10, Q3, U2, U4 or the parts not fitted by default.
-- **Cost of the order (single-unit prices, USD excl. VAT):** base 61.4, add-on 1 4.1, add-on 2 5.5, parts not fitted by default 1.7, spares 21.6, total about 94. By supplier: EKOM 60.7, Özdisan 2.4 (estimated with Mouser prices; Royalohm resistors are sold in 100s), Mouser 31.2. Quantity breaks make the real total a little lower, but EKOM's USD prices follow the exchange rate, so recheck the total on the order day.
+- **Cost of the order (single-unit prices, USD excl. VAT):** base 61.6, add-on 1 4.1, add-on 2 5.5, parts not fitted by default 1.7, spares 21.6, total about 94.5. By supplier: EKOM 61.2, Özdisan 2.2 (estimated with Mouser prices; Royalohm resistors are sold in 100s), Mouser 31.2. Quantity breaks make the real total a little lower, but EKOM's USD prices follow the exchange rate, so recheck the total on the order day.
 - **Equivalents ordered instead of the design part** (same footprint and pinout):
   - C10: KEMET A768EB107M1ELAS036 (100 µF 25 V polymer, 6.3 mm can, 36 mΩ, AEC-Q200) instead of Panasonic EEH-ZA1E101XP (not listed).
   - C15: KEMET C0805C104K1RACTU; C20: KEMET C0805C682K5RACTU (the Yageo parts are not listed).
   - U2: INA180A1IDBVT (same IC, industrial grade). U4: TLV431BCDBZR (0–70 °C grade, same accuracy and pinout). D1: Taiwan Semiconductor BZT52C12-G RHG (12 V, 5 %, SOD-123).
   - J1/J2 plug: Phoenix 1765551 (MSTB 2,5/2-ST-5,08 AU, same series as the 1757019, which EKOM only quotes). The header 1757242 is stocked.
-  - From Özdisan: Royalohm 0805S8F2372T5E for R14 (23.7 kΩ) and 0805S8F1541T5E for R28 (1.54 kΩ), sold in 100s.
+  - From Özdisan: Royalohm 0805S8F2372T5E for R14 (23.7 kΩ), sold in 100s.
 - **From Mouser (mouser.com.tr):** U1 LTC7801EFE#PBF × 2 (EKOM lists only the LTC7801IFE#PBF, on request; Mouser Türkiye had 1,587), R12 1.02 MΩ, D3 BAT46ZFILM (no BAT46 in stock at EKOM) and JP1 CRF2512-J/-000ELF.
 - **L1 (Würth 74435582200):** EKOM 101 (Digi-Key stock), 9.18 USD; Mouser 0 (3,543 due 11 Dec 2026). Order it first.
 - **Parts not fitted by default** are ordered too: R4 (EKOM Yageo RC1206JR-072R2L, 5 %), C13 and R11 (EKOM), D3 and JP1 (Mouser). EKOM's Bourns CRF2512-JZ-R005ELF (5 mΩ metal strip) would also work for JP1 (48 mW at 3.1 A).
@@ -48,13 +48,13 @@ Every part has `MPN`, `Manufacturer` and `Fit`. `Fit` is one of: Base, Add-on 1 
   - INA180A1 (pinout A): OUT 1, GND 2, IN+ 3, IN− 4, VS 5.
   - TLV431 DBZ: 1 REF, 2 K, 3 A (custom symbol).
   - BSC117N08NS5 / BSC030N08NS5 (TDSON-8): 1–3 S, 4 G, 5 D.
-  - Electrolytic polarity on C1 and C10.
+  - Polarity of the polymer capacitors C1 and C10.
 - **Simulation ↔ schematic:** the LTspice files in `sim/ltspice/` use the same reference designators and values as this schematic (lumped parts: C2_12 = C2–C5, C11, C12; C6_9 = C6–C9). The report figures and the BOM notes use the same names; RB/RA/RS/RC/CC/CC2 in the report's equations are R8/R9/R5/R16/C20/C21.
 - **Board ↔ schematic:** every footprint is linked to its symbol, and all pad nets match the netlist (no differences).
 - **DRC (KiCad 7.0.11):** no clearance errors, no unconnected items.
 - **Copper continuity:** the VIN, VIN_N, SW, SNSP and VOUT copper each fill as one island. In1, In2 and B.Cu GND are each one island.
 - **Kelvin sensing:** the sense traces from inside the R5 pads connect only to R6/R7 and U2. No other VOUT/SNSP copper touches them, so no load current flows in the sense lines.
-- **Cost:** about 71 USD (excl. VAT) for one fully populated board (base 61.4, add-on 1 4.1, add-on 2 5.5); about 94 USD for the whole order with the parts not fitted by default and the spares. See the BOM totals.
+- **Cost:** about 71 USD (excl. VAT) for one fully populated board (base 61.6, add-on 1 4.1, add-on 2 5.5); about 94.5 USD for the whole order with the parts not fitted by default and the spares. See the BOM totals.
 
 ## Known points to improve or check interactively
 - **Gate drive and ringing:** the gate paths were shortened on 22 Nov (TG about 34 → 29 mm, BG 28 → 21 mm). If the switch node rings too much on the bench (TP3, 48 V, full load), first increase R2/R3 to 2.2–4.7 Ω, then fit the R4/C13 snubber (2.2 Ω, 330 pF C0G; R4 dissipates about 0.15 W at 48 V).

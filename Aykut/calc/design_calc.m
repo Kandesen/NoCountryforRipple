@@ -155,7 +155,7 @@ fprintf('  RUN on = %.1f V, off = %.1f V;  OVLO trip = %.1f V, release = %.1f V\
 fprintf('\n=== 11. Optional constant-current limit (INA180A1, gain 20) ===\n');
 Vref = 1.24*(1+30.1/10.0);    % TLV431 set as ~5.0 V shunt regulator (30.1k/10.0k)
 fprintf('  TLV431 rail = %.2f V (also supplies INA180)\n', Vref);
-lims = [5.5 8.0]; rb = [1.54e3 2.37e3];
+rb = [1.54e3 2.49e3];   % 1.54k: 5 A target; 2.49k (fitted): 7.5 A overload target
 for k = 1:2
     vset = Vref*rb(k)/(10e3+rb(k));
     fprintf('  setpoint 10.0k / %.2fk -> %.3f V -> limit %.2f A\n', rb(k)/1e3, vset, vset/(20*P.Rsense));

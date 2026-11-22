@@ -82,7 +82,7 @@
 === 11. Optional constant-current limit (INA180A1, gain 20) ===
   TLV431 rail = 4.97 V (also supplies INA180)
   setpoint 10.0k / 1.54k -> 0.664 V -> limit 5.53 A
-  setpoint 10.0k / 2.37k -> 0.953 V -> limit 7.94 A
+  setpoint 10.0k / 2.49k -> 0.991 V -> limit 8.26 A
   injection to pull VOUT to 0 V: 86 uA -> R_inj <= 83 k (22 k chosen)
 
 === 12. Reverse-polarity MOSFET (low side, BSC030N08NS5) ===

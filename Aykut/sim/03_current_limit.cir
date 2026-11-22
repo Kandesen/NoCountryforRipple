@@ -7,7 +7,7 @@
 *   55 / 50 ns dead times, TG 2.2/1.0 ohm, BG 2.0/1.0 ohm drivers, bootstrap from DRVCC = 10 V.
 * ASSUMED (not in the datasheet): ITH 0.45 V -> 0 mV, 2.2 V -> 75 mV; slope comp 50 % of down-slope.
 * Power stage: BSC117N08NS5 VDMOS models (hot RDS(on)), 22 uH / 8.7 mOhm, 6 mOhm sense,
-*   4 x 22 uF ceramic + 100 uF polymer out, 4 x 2.2 uF ceramic + 100 uF electrolytic in, 1 uH lab leads.
+*   4 x 22 uF ceramic + 100 uF polymer out, 4 x 2.2 uF ceramic + 82 uF polymer in, 1 uH lab leads.
 .param VIN=24 FSW=200k CCLOOP=1
 .param TS={1/FSW}
 
@@ -17,8 +17,8 @@ Rsrc  vsrc nlead 30m
 Lsrc  nlead vin 1u
 Ccin  vin ncin 4u
 Rcin  ncin 0 2m
-Celin vin nel 100u
-Rel   nel 0 0.2
+Celin vin nel 82u
+Rel   nel 0 18m
 
 *---------------- power stage ----------------
 M1 vin tg sw BSC117
@@ -134,8 +134,8 @@ Rina  ina_r ina 455
 Cina  ina 0 1n
 Rinf  ina inp 10k
 Cinf  inp 0 10n
-* setpoint: 4.97 V x 1.54k/(10k+1.54k) = 0.663 V -> 5.53 A
-Vset  vset 0 0.663
+* setpoint: 4.97 V x 2.49k/(10k+2.49k) = 0.991 V -> 8.26 A (overload version; R28 = 1.54k gives 0.663 V -> 5.53 A)
+Vset  vset 0 0.991
 * LM2904B differential integrator, Rinf*Cinf = Ri*Ci = 100 us (behavioural op-amp: 100 dB, 1 MHz GBW, output 0 .. DRVCC-1.5 V)
 Ri    vset inn 10k
 Ci    inn opo 10n

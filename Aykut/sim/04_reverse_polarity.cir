@@ -11,10 +11,10 @@ Rsrc  vpos_s vpos 30m
 MQ3   vneg_t g 0 BSC030
 R1    vpos g 100k
 D1    0 g DZ12
-* converter input: C2-C5, C11, C12 (6 x 2.2 uF ceramic at DC bias), C1 100 uF electrolytic, equivalent load
+* converter input: C2-C5, C11, C12 (6 x 2.2 uF ceramic at DC bias), C1 82 uF polymer (KEMET A786MN826M1JLAS018), equivalent load
 C2_12 vpos 0 6u
-C1    vpos nel 100u
-Rel   nel 0 0.2
+C1    vpos nel 82u
+Rel   nel 0 18m
 Rconv vpos 0 37
 
 .model DZ12 D(Is=1e-12 N=1 BV=12 IBV=5m Rs=5)

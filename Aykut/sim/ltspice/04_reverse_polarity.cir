@@ -8,7 +8,7 @@ MQ3   VIN_N Q3_G 0 0 BSC030N08NS5
 R1    IN Q3_G 100k
 D1    0 Q3_G BZT52B12
 C2_12 IN 0 6u Rser=2m
-C1    IN 0 100u Rser=0.2
+C1    IN 0 82u Rser=18m
 Rconv IN 0 37
 .model BZT52B12 D(Is=1e-12 N=1 BV=12 IBV=5m Rs=5)
 .model BSC030N08NS5 VDMOS(Rg=1.6 Rd=2.4m Rs=0.3m Vto=3.0 Kp=250 Lambda=0.01 Cgdmax=1.4n Cgdmin=40p A=0.5 Cgs=4n
