@@ -8,7 +8,7 @@ Open `NoCountryforRipple_Buck.kicad_pro` in KiCad 10. The files were generated w
 | `NoCountryforRipple_Buck.kicad_pcb` | 4-layer PCB, 78 × 62 mm, fully routed |
 | `lib/NCFR.kicad_sym` | Project symbols: `LTC7801` and `TLV431_DBZ` |
 | `lib/NCFR.pretty/LTC7801_FE24_AA.kicad_mod` | LTC7801 TSSOP-24 footprint with exposed pad (FE24 AA: EP 2.74 × 3.25 mm, 6 thermal vias) |
-| `bom/BOM_NoCountryforRipple_Buck.csv` | BOM grouped by MPN, with fit status and Digi-Key/Mouser search links |
+| `bom/BOM_NoCountryforRipple_Buck.csv` | BOM grouped by MPN, with fit status, supplier to order from (EKOM / Özdisan / Mouser), stock and prices at each, and Digi-Key/Mouser search links |
 | `docs/` | Schematic PDF, layer plots and `assembly_top.pdf` (part outlines with every reference, A4, for hand assembly) |
 
 ## Symbol fields
@@ -25,10 +25,20 @@ Every part has `MPN`, `Manufacturer` and `Fit`. `Fit` is one of: Base, Add-on 1 
 - **DRC (KiCad 7):** no clearance errors, no unconnected items. No silkscreen overlaps. The only remaining items are "library footprint" notices that only appear because the generator did not have your library paths.
 
 ## Sourcing
-- **Checked on 22 Nov 2026:** every part number in the BOM is active and in stock at Mouser (or Digi-Key). The exception is **L1 (Würth 74435582200)**: Mouser shows 0 in stock with 3,543 due on 11 Dec 2026, so order it first (or check Digi-Key stock on the day).
-- Parts replaced in this check because they were end-of-life, not recommended for new designs, or out of stock at both distributors: Murata GRM32ER72A225KA35L, GRM21BR71H223KA01L, GRM21BR71H682KA01L, GRM2165C1H151JA01D, GRM2165C1H102JA01D, GRM2195C1H103JA01D; Diodes BZT52C12-7-F → Comchip BZT52B12-HF; BAT46W-7-F → ST BAT46ZFILM; INA180A1IDBVR (reel) → INA180A1IDBVT (small reel, same chip); Samsung CL32B226KAJNNNE / CL31B106KAHNNNE / CL21B104KCFNNNE as primary (out of stock at Digi-Key/Mouser) → KEMET / Yageo, with the Samsung parts kept as the Özdisan option.
-- The BOM gives, for every line, the Mouser/Digi-Key stock and the **Özdisan part and stock**. Royalohm 0805S8F… (1 %, thick film, 0805) resistors are a valid substitute for the Yageo RC0805FR parts; Özdisan sells them in multiples of 100.
-- Not available at Özdisan: U1, L1, R5, C1, C2–C5/C11/C12, C10, C19, J1/J2, D1, U2, U4, and the resistors R8/R9 (0.1 %), R12 (1.02 MΩ) and R13 (53.6 kΩ). If R12/R13 must come from Özdisan, 1 MΩ / 56 kΩ (both stocked as Royalohm) would move the UV/OV thresholds to about 16.3 V / 54.7 V; this is not applied.
+- **Supplier order:** e-komponent.com (EKOM, Digi-Key's distributor in Turkey) and Özdisan first; Digi-Key or Mouser (mouser.com.tr) only for parts neither of them stocks. Rule per BOM line: the exact part at EKOM → EKOM; otherwise the exact part at Özdisan → Özdisan; otherwise an equivalent (same footprint, pinout and rating) at EKOM/Özdisan; otherwise Mouser/Digi-Key. The BOM's "Order from / Order part" columns apply this; the EKOM, Özdisan and Mouser/Digi-Key columns list what each one had on **22 Nov 2026**.
+- **EKOM:** most of its stock is Digi-Key stock shipped from abroad (7–10 working days, estimated dispatch 1–7 Dec 2026); the price includes shipping and customs. Only R25 (RC0805FR-0730K1L) was in stock in Turkey (1–3 days). Prices in the BOM are EKOM's 1-piece USD price without the 20 % VAT (the TL price on the site includes VAT).
+- **What the BOM orders:** every part, including the ones not fitted by default (D3, JP1, R4, C13, R11), plus spares. "Qty per board" is the fitted quantity, "Spares" the extra pieces and "Qty to order" their sum. Spares: one extra LTC7801, two BSC117N08NS5, one each of Q3, R5, U2, U3, U4, D1, D2 and D3, and two of every 0805/1206/1210 chip resistor and capacitor (counted once per part number). No spares for L1, C1, C10, JP1 and the terminal blocks.
+- **Cost of the order (single-unit prices, USD excl. VAT; real cost is lower because most lines are bought in 2–8 pieces):** base 61.4, add-on 1 4.1, add-on 2 5.5, parts not fitted by default 1.7, spares 45.2, total about 118. By supplier: EKOM 83.1, Özdisan 3.1 (estimated with Mouser prices; Royalohm resistors are sold in 100s), Mouser 31.7. Without the spares the set is about 73 USD; the spares (about 15 USD of it the spare LTC7801) take the order above the 100 USD per-group budget at single-unit prices.
+- **Equivalents ordered instead of the design part** (same footprint and pinout):
+  - C10: KEMET A768EB107M1ELAS036 (100 µF 25 V polymer, 6.3 mm can, 36 mΩ, AEC-Q200) instead of Panasonic EEH-ZA1E101XP (not listed).
+  - C15: KEMET C0805C104K1RACTU; C20: KEMET C0805C682K5RACTU (the Yageo parts are not listed).
+  - U2: INA180A1IDBVT (same IC, industrial grade). U4: TLV431BCDBZR (0–70 °C grade, same accuracy and pinout). D1: Taiwan Semiconductor BZT52C12-G RHG (12 V, 5 %, SOD-123).
+  - J1/J2 plug: Phoenix 1765551 (MSTB 2,5/2-ST-5,08 AU, same series as the 1757019, which EKOM only quotes). The header 1757242 is stocked.
+  - From Özdisan: Royalohm 0805S8F2372T5E for R14 (23.7 kΩ) and 0805S8F1541T5E for R28 (1.54 kΩ), sold in 100s.
+- **From Mouser (mouser.com.tr):** U1 LTC7801EFE#PBF × 2 (EKOM lists only the LTC7801IFE#PBF, on request; Mouser Türkiye had 1,587), R12 1.02 MΩ, D3 BAT46ZFILM (no BAT46 in stock at EKOM) and JP1 CRF2512-J/-000ELF.
+- **L1 (Würth 74435582200):** EKOM 101 (Digi-Key stock), 9.18 USD; Mouser 0 (3,543 due 11 Dec 2026). Order it first.
+- **Parts not fitted by default** are ordered too: R4 (EKOM Yageo RC1206JR-072R2L, 5 %), C13 and R11 (EKOM), D3 and JP1 (Mouser). EKOM's Bourns CRF2512-JZ-R005ELF (5 mΩ metal strip) would also work for JP1 (48 mW at 3.1 A).
+- Earlier swaps re-checked at EKOM: Murata GRM32ER72A225KA35L, Samsung CL32B226KAJNNNE / CL31B106KAHNNNE / CL21B104KCFNNNE and BAT46W-7-F are out of stock there; Yageo RC2512JK-070RL is stocked but rated 2 A (too low for JP1); INA180B1IDBVR is stocked but has the other pinout. None of the earlier swaps needs to be undone.
 
 ## What has been verified
 - **Schematic ↔ intended design:** KiCad's exported netlist was compared pin by pin with the intended netlist (191 pins, no differences). The intended netlist was reviewed net by net against the design.
@@ -36,13 +46,14 @@ Every part has `MPN`, `Manufacturer` and `Fit`. `Fit` is one of: Base, Add-on 1 
   - LTC7801 FE24: pin table; exposed pad = GND.
   - INA180A1 (pinout A): OUT 1, GND 2, IN+ 3, IN− 4, VS 5.
   - TLV431 DBZ: 1 REF, 2 K, 3 A (custom symbol).
-  - BSC117N08NS5 / BSC040N08NS5 (TDSON-8): 1–3 S, 4 G, 5 D.
+  - BSC117N08NS5 / BSC030N08NS5 (TDSON-8): 1–3 S, 4 G, 5 D.
   - Electrolytic polarity on C1 and C10.
+- **Simulation ↔ schematic:** the LTspice files in `sim/ltspice/` use the same reference designators and values as this schematic (lumped parts: C2_12 = C2–C5, C11, C12; C6_9 = C6–C9). The report figures and the BOM notes use the same names; RB/RA/RS/RC/CC/CC2 in the report's equations are R8/R9/R5/R16/C20/C21.
 - **Board ↔ schematic:** every footprint is linked to its symbol, and all pad nets match the netlist (no differences).
 - **DRC (KiCad 7.0.11):** no clearance errors, no unconnected items.
 - **Copper continuity:** the VIN, VIN_N, SW, SNSP and VOUT copper each fill as one island. In1, In2 and B.Cu GND are each one island.
 - **Kelvin sensing:** the sense traces from inside the R5 pads connect only to R6/R7 and U2. No other VOUT/SNSP copper touches them, so no load current flows in the sense lines.
-- **Cost:** about 45 USD for one fully populated board at single-unit prices (Base 39.4, add-on 1 2.7, add-on 2 2.8); see the BOM totals.
+- **Cost:** about 71 USD (excl. VAT) for one fully populated board (base 61.4, add-on 1 4.1, add-on 2 5.5); about 118 USD for the whole order with the parts not fitted by default and the spares. See the BOM totals.
 
 ## Known points to improve or check interactively
 - **Gate drive and ringing:** the gate paths were shortened on 22 Nov (TG about 34 → 29 mm, BG 28 → 21 mm). If the switch node rings too much on the bench (TP3, 48 V, full load), first increase R2/R3 to 2.2–4.7 Ω, then fit the R4/C13 snubber (2.2 Ω, 330 pF C0G; R4 dissipates about 0.15 W at 48 V).

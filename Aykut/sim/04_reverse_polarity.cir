@@ -1,25 +1,30 @@
-* EE463 60 W sync buck - Step 4: input reverse-polarity protection (optional add-on)
-* Low-side N-MOSFET (BSC040N08NS5): drain -> VIN- terminal, source -> circuit ground,
-* gate -> VIN+ through 100 k, 12 V Zener gate clamp (BZT52C12). Bypass footprint JP_RP (0 ohm) not fitted.
+* EE463 60 W sync buck - Step 4: input reverse-polarity protection (optional add-on 1), ngspice cross-check
+* Q3 (BSC030N08NS5): drain -> VIN- terminal, source -> circuit ground,
+* gate -> VIN+ through R1 (100 k), D1 12 V Zener gate clamp (BZT52B12). Bypass footprint JP1 (0 ohm) not fitted.
 * The converter is represented by its input capacitors and an equivalent 60 W load at 48 V (37 ohm).
-* VIN = +48 V (normal) or -48 V (reversed); set in the .control block.
+* VIN = +48 V (normal) or -48 V (reversed); change .param VIN.
 .param VIN=48
 
-Vin   vpos_s vneg_t {VIN}
+V1    vpos_s vneg_t {VIN}
 Rsrc  vpos_s vpos 30m
-* reverse-polarity MOSFET and gate drive
-Mrp   vneg_t g 0 BSC040
-Rg    vpos g 100k
-Dz    0 g DZ12
-* converter input: 4 x 2.2 uF ceramic, 100 uF electrolytic, equivalent load
-Ccin  vpos 0 4u
-Celin vpos nel 100u
+* reverse-polarity MOSFET Q3 and its gate drive
+MQ3   vneg_t g 0 BSC030
+R1    vpos g 100k
+D1    0 g DZ12
+* converter input: C2-C5, C11, C12 (6 x 2.2 uF ceramic at DC bias), C1 100 uF electrolytic, equivalent load
+C2_12 vpos 0 6u
+C1    vpos nel 100u
 Rel   nel 0 0.2
 Rconv vpos 0 37
 
 .model DZ12 D(Is=1e-12 N=1 BV=12 IBV=5m Rs=5)
-.model BSC040 VDMOS(Rg=1.2 Rd=4.5m Rs=0.3m Vto=3.0 Kp=150 Lambda=0.01
-+ Cgdmax=1n Cgdmin=30p a=0.5 Cgs=3n Cjo=3.5n Vj=0.7 M=0.5 Is=1e-12 N=1.05 Rb=2m TT=10n BV=80)
+.model BSC030 VDMOS(Rg=1.6 Rd=2.4m Rs=0.3m Vto=3.0 Kp=250 Lambda=0.01
++ Cgdmax=1.4n Cgdmin=40p a=0.5 Cgs=4n Cjo=5n Vj=0.7 M=0.5 Is=1e-12 N=1.05 Rb=1.5m TT=10n BV=80)
 
 .tran 1u 3m
+.control
+run
+meas tran vds AVG v(vneg_t) from=2.5m to=3m
+meas tran vgs AVG v(g) from=2.5m to=3m
+.endc
 .end

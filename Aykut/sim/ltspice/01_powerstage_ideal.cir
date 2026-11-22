@@ -1,26 +1,24 @@
-* EE463 60 W sync buck - Step 1: ideal power stage, open loop, fixed duty cycle (LTspice)
-* Verifies inductor ripple, peak current and output ripple against the hand calculations.
+* EE463 60 W sync buck - Step 1: ideal power stage, open loop, fixed duty cycle (LTspice netlist)
+* Same circuit as 01_powerstage_ideal.asc; names follow the KiCad schematic (SQ1/SQ2 = Q1/Q2 as ideal switches,
+* R5 = 6 mOhm sense resistor, C6_9 = C6-C9 (4 x 22 uF, ~40 uF at 12 V), C10 = 100 uF polymer).
 .param FSW=200k TS={1/FSW}
 .param D={(12 + 5*0.014)/VIN}
 .step param VIN list 20 24 36 48
-Vin  vin 0 {VIN}
-Vpwm pwm 0 PULSE(0 1 0 1n 1n {D*TS} {TS})
-Bpwmn pwmn 0 V=1-V(pwm)
-Shs  vin sw  pwm  0 SWI
-Sls  sw  0   pwmn 0 SWI
+V1   IN 0 {VIN}
+V2   PWM 0 PULSE(0 1 0 1n 1n {D*TS} {TS})
+B1   PWMN 0 V=1-V(PWM)
+SQ1  IN SW PWM 0 SWI
+SQ2  SW 0 PWMN 0 SWI
 .model SWI SW(Ron=1m Roff=1e7 Vt=0.5 Vh=0)
-L1   sw  nl  22u
-RL   nl  nl2 7m
-Rsen nl2 vout 6m
-Ccer vout nc1 40u
-Rcer nc1 0 0.75m
-Cpol vout np1 100u
-Rpol np1 0 30m
-Rload vout 0 2.4
-.ic V(vout)=12 I(L1)=5
+L1   SW SNSP 22u Rser=7m
+R5   SNSP OUT 6m
+C6_9 OUT 0 40u Rser=0.75m
+C10  OUT 0 100u Rser=30m
+Rload OUT 0 2.4
+.ic V(OUT)=12 I(L1)=5
 .tran 0 8m 7.5m 5n uic
-.meas tran Vout_avg AVG V(vout) FROM 7.8m TO 8m
-.meas tran Vout_pp  PP  V(vout) FROM 7.8m TO 8m
-.meas tran IL_pp    PP  I(L1)   FROM 7.8m TO 8m
-.meas tran IL_max   MAX I(L1)   FROM 7.8m TO 8m
+.meas tran Vout_avg AVG V(OUT) FROM 7.8m TO 8m
+.meas tran Vout_pp  PP  V(OUT) FROM 7.8m TO 8m
+.meas tran IL_pp    PP  I(L1)  FROM 7.8m TO 8m
+.meas tran IL_max   MAX I(L1)  FROM 7.8m TO 8m
 .end

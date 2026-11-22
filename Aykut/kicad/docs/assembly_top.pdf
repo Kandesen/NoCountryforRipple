@@ -130,7 +130,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C11\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 CC1210KKX7R0BB225\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 Yageo\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C11\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C1210C225K1RACTU\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 KEMET\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -234,7 +234,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C4\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 CC1210KKX7R0BB225\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 Yageo\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C4\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C1210C225K1RACTU\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 KEMET\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -442,7 +442,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C7\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 22\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C1210C226K3RACTU\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 KEMET\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 25 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C7\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 22\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C3225X7R1E226M250AB\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 TDK\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 25 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -481,7 +481,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C2\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 CC1210KKX7R0BB225\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 Yageo\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C2\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C1210C225K1RACTU\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 KEMET\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -533,7 +533,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 CC1210KKX7R0BB225\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 Yageo\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C1210C225K1RACTU\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 KEMET\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -546,7 +546,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C12\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 CC1210KKX7R0BB225\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 Yageo\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C12\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C1210C225K1RACTU\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 KEMET\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -689,7 +689,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C3\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 CC1210KKX7R0BB225\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 Yageo\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C3\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 2\0562\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C1210C225K1RACTU\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 KEMET\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 100 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -702,7 +702,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C9\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 22\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C1210C226K3RACTU\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 KEMET\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 25 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C9\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 22\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C3225X7R1E226M250AB\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 TDK\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 25 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -832,7 +832,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C6\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 22\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C1210C226K3RACTU\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 KEMET\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 25 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C6\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 22\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C3225X7R1E226M250AB\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 TDK\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 25 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -884,7 +884,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 U2\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 INA180A1\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Add\055on 2\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 INA180A1IDBVT\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 Texas Instruments\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Package\137TO\137SOT\137SMD\072SOT\05523\0555\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 SOT\054 5 Pin \134u0028https\072\057\057www\056jedec\056org\057sites\057default\057files\057docs\057Mo\055178c\056PDF variant AA\134u0029\054 generated with kicad\055footprint\055generator ipc\137gullwing\137generator\056py\047\054 cReturn\072 \047https\072\057\057www\056jedec\056org\057sites\057default\057files\057docs\057Mo\055178c\056PDF variant AA\134u0029\054 generated with kicad\055footprint\055generator ipc\137gullwing\137generator\056py\047 \175\054 \173 cName\072 \047Keywords \075 SOT TO\137SOT\137SMD\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 U2\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 INA180A1\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Add\055on 2\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 INA180A1QDBVRQ1\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 Texas Instruments\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Package\137TO\137SOT\137SMD\072SOT\05523\0555\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 SOT\054 5 Pin \134u0028https\072\057\057www\056jedec\056org\057sites\057default\057files\057docs\057Mo\055178c\056PDF variant AA\134u0029\054 generated with kicad\055footprint\055generator ipc\137gullwing\137generator\056py\047\054 cReturn\072 \047https\072\057\057www\056jedec\056org\057sites\057default\057files\057docs\057Mo\055178c\056PDF variant AA\134u0029\054 generated with kicad\055footprint\055generator ipc\137gullwing\137generator\056py\047 \175\054 \173 cName\072 \047Keywords \075 SOT TO\137SOT\137SMD\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -910,7 +910,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C8\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 22\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C1210C226K3RACTU\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 KEMET\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 25 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 C8\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 22\134u00B5\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Base\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 C3225X7R1E226M250AB\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 TDK\047\054 cReturn\072 null \175\054 \173 cName\072 \047Voltage \075 25 V\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Capacitor\137SMD\072C\1371210\1373225Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Capacitor SMD 1210 \134u00283225 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 76\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 capacitor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -1014,7 +1014,7 @@ endobj
 /A <<
 /Type /Action
 /S /JavaScript
-/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 JP1\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 0R \134u0028DNP\134u0029\047\054 cReturn\072 null \175\054 \173 cName\072 \047DNP \075 yes\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Fit only without add\055on 1\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 RC2512JK\055070RL\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 Yageo\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Resistor\137SMD\072R\1372512\1376332Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Resistor SMD 2512 \134u00286332 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 72\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 resistor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
+/JS (var aParams \075 \133 \173 cName\072 \047Reference designator \075 JP1\047\054 cReturn\072 null \175\054 \173 cName\072 \047Value \075 0R \134u0028DNP\134u0029\047\054 cReturn\072 null \175\054 \173 cName\072 \047DNP \075 yes\047\054 cReturn\072 null \175\054 \173 cName\072 \047Fit \075 Fit only without add\055on 1\047\054 cReturn\072 null \175\054 \173 cName\072 \047MPN \075 CRF2512\055J\057\055000ELF\047\054 cReturn\072 null \175\054 \173 cName\072 \047Manufacturer \075 Bourns\047\054 cReturn\072 null \175\054 \173 cName\072 \047Footprint \075 Resistor\137SMD\072R\1372512\1376332Metric\047\054 cReturn\072 null \175\054 \173 cName\072 \047Description \075 Resistor SMD 2512 \134u00286332 Metric\134u0029\054 square \134u0028rectangular\134u0029 end terminal\054 IPC\1377351 nominal\054 \134u0028Body size source\072 IPC\055SM\055782 page 72\054 https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047\054 cReturn\072 \047https\072\057\057www\056pcb\0553d\056com\057wordpress\057wp\055content\057uploads\057ipc\055sm\055782a\137amendment\1371\137and\1372\056pdf\134u0029\054 generated with kicad\055footprint\055generator\047 \175\054 \173 cName\072 \047Keywords \075 resistor\047\054 cReturn\072 null \175\054 \135\073 var cChoice \075 app\056popUpMenuEx\056apply\050 app\054 aParams \051\073 if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 1 \051 \075\075 \047\043\047 \051    this\056pageNum \075 parseInt\050 cChoice\056slice\050 1 \051 \051\073 else if\050 cChoice \041\075 null \046\046 cChoice\056substring\050 0\054 4 \051 \075\075 \047http\047 \051    app\056launchURL\050 cChoice \051\073)
 >>
 >>
 endobj
@@ -11236,66 +11236,66 @@ xref
 0000005449 00000 n 
 0000007083 00000 n 
 0000008468 00000 n 
-0000010366 00000 n 
-0000012245 00000 n 
-0000014070 00000 n 
-0000016236 00000 n 
-0000018141 00000 n 
-0000020054 00000 n 
-0000021864 00000 n 
-0000023778 00000 n 
-0000025675 00000 n 
-0000026963 00000 n 
-0000028229 00000 n 
-0000029559 00000 n 
-0000031123 00000 n 
-0000032363 00000 n 
-0000034255 00000 n 
-0000036411 00000 n 
-0000038322 00000 n 
-0000040237 00000 n 
-0000042431 00000 n 
-0000044342 00000 n 
-0000045613 00000 n 
-0000047247 00000 n 
-0000048511 00000 n 
-0000050396 00000 n 
-0000052287 00000 n 
-0000053577 00000 n 
-0000055675 00000 n 
-0000057571 00000 n 
-0000058840 00000 n 
-0000060658 00000 n 
-0000062832 00000 n 
-0000064729 00000 n 
-0000066627 00000 n 
-0000068795 00000 n 
-0000070693 00000 n 
-0000072864 00000 n 
-0000074194 00000 n 
-0000076004 00000 n 
-0000077821 00000 n 
-0000079089 00000 n 
-0000081180 00000 n 
-0000082994 00000 n 
-0000084890 00000 n 
-0000086787 00000 n 
-0000088678 00000 n 
-0000090584 00000 n 
-0000091927 00000 n 
-0000093858 00000 n 
-0000096041 00000 n 
-0000098223 00000 n 
-0000099794 00000 n 
-0000101953 00000 n 
-0000104120 00000 n 
-0000105351 00000 n 
-0000107242 00000 n 
-0000109065 00000 n 
-0000110355 00000 n 
-0000112446 00000 n 
-0000114126 00000 n 
-0000115950 00000 n 
+0000010365 00000 n 
+0000012244 00000 n 
+0000014069 00000 n 
+0000016235 00000 n 
+0000018140 00000 n 
+0000020053 00000 n 
+0000021863 00000 n 
+0000023777 00000 n 
+0000025673 00000 n 
+0000026961 00000 n 
+0000028227 00000 n 
+0000029557 00000 n 
+0000031121 00000 n 
+0000032361 00000 n 
+0000034253 00000 n 
+0000036409 00000 n 
+0000038320 00000 n 
+0000040235 00000 n 
+0000042429 00000 n 
+0000044340 00000 n 
+0000045611 00000 n 
+0000047245 00000 n 
+0000048509 00000 n 
+0000050394 00000 n 
+0000052286 00000 n 
+0000053576 00000 n 
+0000055674 00000 n 
+0000057569 00000 n 
+0000058838 00000 n 
+0000060656 00000 n 
+0000062830 00000 n 
+0000064726 00000 n 
+0000066623 00000 n 
+0000068791 00000 n 
+0000070689 00000 n 
+0000072860 00000 n 
+0000074190 00000 n 
+0000076000 00000 n 
+0000077817 00000 n 
+0000079085 00000 n 
+0000081176 00000 n 
+0000082990 00000 n 
+0000084886 00000 n 
+0000086782 00000 n 
+0000088674 00000 n 
+0000090580 00000 n 
+0000091923 00000 n 
+0000093854 00000 n 
+0000096037 00000 n 
+0000098219 00000 n 
+0000099790 00000 n 
+0000101949 00000 n 
+0000104116 00000 n 
+0000105347 00000 n 
+0000107239 00000 n 
+0000109062 00000 n 
+0000110352 00000 n 
+0000112443 00000 n 
+0000114125 00000 n 
+0000115949 00000 n 
 0000117841 00000 n 
 0000119110 00000 n 
 0000120439 00000 n 
@@ -11304,18 +11304,18 @@ xref
 0000125510 00000 n 
 0000127396 00000 n 
 0000128673 00000 n 
-0000130595 00000 n 
-0000132480 00000 n 
-0000134212 00000 n 
-0000135999 00000 n 
-0000137827 00000 n 
-0000139117 00000 n 
-0000140516 00000 n 
-0000141869 00000 n 
-0000143752 00000 n 
-0000145316 00000 n 
-0000147139 00000 n 
-0000148532 00000 n 
+0000130605 00000 n 
+0000132490 00000 n 
+0000134222 00000 n 
+0000136009 00000 n 
+0000137837 00000 n 
+0000139127 00000 n 
+0000140526 00000 n 
+0000141879 00000 n 
+0000143762 00000 n 
+0000145326 00000 n 
+0000147149 00000 n 
+0000148542 00000 n 
 trailer
 <<
 /Size 94
@@ -11323,5 +11323,5 @@ trailer
 /Info 1 0 R
 >>
 startxref
-266915
+266925
 %%EOF
