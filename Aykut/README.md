@@ -58,11 +58,16 @@ Group repo: NoCountryforRipple · Folder owner: Aykut
 | 2026-11-22 | Without the add-on, a hard short causes hiccup (REGSD), not a latch or an overshoot | With EXTVCC below its switchover (≈7.5 V) and SS above 2.2 V, the controller shuts down, discharges SS and restarts. Average short-circuit current is about 2.5 A, and recovery is a normal soft start (max 12.06 V). |
 | 2026-11-22 | Current-limit add-on: R_SS = 330 kΩ from SS to INTVCC | Without it, REGSD would end constant-current operation about 3 ms into an overload with Vout below 7.5 V. With it, the limit holds at 5.53 A down to a dead short at both 24 V and 48 V. Fitted only with the add-on. |
 | 2026-11-22 | Current-limit integrator: R2 = 10 kΩ, C2 = 10 nF on the non-inverting input (was 1 kΩ), matching Ri·Ci = 100 µs | With 1 kΩ the stage also passed the sense signal through at unity gain, which oscillated at 23 kHz in current limit (the averages still looked right). With matched time constants it is a pure differential integrator: no oscillation at 1.6 Ω, 0.5 Ω or a short. |
+| 2026-11-22 | KiCad project created: one-sheet schematic and a 4-layer, 78 × 62 mm PCB with every part on top (see `kicad/README.md`) | KiCad's exported netlist was checked pin by pin against the intended netlist. KiCad 7 DRC: no clearance errors, no unconnected items. |
+| 2026-11-22 | Input ceramics: 6 × 2.2 µF / 100 V instead of 4 | With 4, the 100 µF electrolytic would carry about 0.7 A RMS (rated 0.4 A) and lose about 0.15 W. With 6, that drops to about 0.5 A and 0.07 W. Cost about 1 USD. |
+| 2026-11-22 | TLV431 uses a project symbol (`NCFR:TLV431_DBZ`: 1 = REF, 2 = K, 3 = A) | KiCad's `TL431DBZ` symbol numbers its pins 1 = K, 2 = REF, which is wrong for the TLV431 in SOT-23 (DBZ). |
+| 2026-11-22 | INA180 supply taken from the TLV431 rail through R20 = 100 Ω, with its 100 nF bypass after R20 | TI only guarantees TLV431 stability with no load capacitor. The resistor isolates the bypass capacitor from the shunt regulator. |
+| 2026-11-22 | Layout options: 0 Ω gate resistors R2/R3, snubber footprint R4/C13 (DNP), external boost diode D3 (DNP), EXTVCC fallback R11 (DNP) | Switching speed, ringing and bias supply can be tuned on the bench without a new board. |
+| 2026-11-22 | Removed the feed-forward capacitor footprint and the ITH/FB test points | They added copper stubs to high-impedance nodes. ITH and FB can be probed at C21 and R9. |
 
 ## Folder layout
 
 - `calc/`: analytical calculations (MATLAB `.m`, tested in GNU Octave; `*_output.txt` holds the printed results)
 - `sim/`: simulations. `sim/ltspice/` holds the main LTspice files (ADI's LTC7801 model); the top level holds the earlier ngspice cross-check netlists (see sim/README.md)
-- `kicad/`: schematic and PCB project
-- `bom/`: bill of materials and sponsorship sheet entries
+- `kicad/`: KiCad project (schematic, 4-layer PCB, project libraries, BOM); see kicad/README.md
 - `docs/`: pre-report (Word + PDF preview) and its figures
