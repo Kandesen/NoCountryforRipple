@@ -51,16 +51,19 @@ R4,1,0,1,2.2R,"5 %, 0.25 W",R_1206_3216Metric,Yageo,RC1206JR-072R2L,DNP (snubber
 R11,1,0,1,0R,"0 Ohm jumper, 2 A",R_0805_2012Metric,Yageo,RC0805JR-070RL,DNP (EXTVCC fallback),No (DNP),EKOM,same part,0.12,0.12,,same part,"1,949,180 (abroad)",0.12,Royalohm 0805S8J0000T5E,in stock (MOQ 100),"Mouser 1,815,001",https://www.digikey.com/en/products/result?keywords=RC0805JR-070RL,https://www.mouser.com/c/?q=RC0805JR-070RL,
 R28 (alternative),0,2,2,2.37k,"1 %, 0.125 W",R_0805_2012Metric,Yageo,RC0805FR-072K37L,Add-on 2 (bench setting of the limit),No (alternative value),EKOM,same part,0.12,0.24,,same part,"86,739 (abroad)",0.12,-,-,"Mouser (Yageo RC0805, stocked)",https://www.digikey.com/en/products/result?keywords=RC0805FR-072K37L,https://www.mouser.com/c/?q=RC0805FR-072K37L,7.94 A limit (6 % above 7.5 A)
 R28 (alternative),0,2,2,2.32k,"1 %, 0.125 W",R_0805_2012Metric,Royalohm,0805S8F2321T5E,Add-on 2 (bench setting of the limit),No (alternative value),Ozdisan,same part,0.10,0.20,"est. (Mouser price), MOQ 100",-,not listed,,same part,"19,885",- (Royalohm not sold by Mouser/Digi-Key),https://www.digikey.com/en/products/result?keywords=0805S8F2321T5E,https://www.mouser.com/c/?q=0805S8F2321T5E,7.80 A limit (4 % above 7.5 A)
+R28 (alternative),0,2,2,2.26k,"1 %, 0.125 W",R_0805_2012Metric,Royalohm,0805S8F2261T5E,Add-on 2 (bench setting of the limit),No (alternative value),Ozdisan,same part,0.10,0.20,"est. (Mouser price), MOQ 100",-,not listed,,same part,"6,280",- (Royalohm not sold by Mouser/Digi-Key),https://www.digikey.com/en/products/result?keywords=0805S8F2261T5E,https://www.mouser.com/c/?q=0805S8F2261T5E,7.64 A limit (2 % above 7.5 A); for bench trimming
+R28 (alternative),0,2,2,2.21k,"1 %, 0.125 W",R_0805_2012Metric,Yageo,RC0805FR-072K21L,Add-on 2 (bench setting of the limit),No (alternative value),EKOM,same part,0.12,0.24,,same part,"150,321 (abroad)",0.12,-,-,"Mouser (Yageo RC0805, stocked)",https://www.digikey.com/en/products/result?keywords=RC0805FR-072K21L,https://www.mouser.com/c/?q=RC0805FR-072K21L,7.50 A nominal; only if the measured limit comes out high
+R28 (alternative),0,2,2,1.54k,"1 %, 0.125 W",R_0805_2012Metric,Royalohm,0805S8F1541T5E,Add-on 2 (bench setting of the limit),No (alternative value),Ozdisan,same part,0.10,0.20,"est. (Mouser price), MOQ 100",-,not listed,,same part,"487,405",- (Royalohm not sold by Mouser/Digi-Key),https://www.digikey.com/en/products/result?keywords=0805S8F1541T5E,https://www.mouser.com/c/?q=0805S8F1541T5E,5.53 A limit: standard 5 A design (fallback if the overload bonus is dropped)
 
 "Approx. totals (one board set, single-unit prices, USD excl. VAT)"
 Base,,,,,,,,,,,,,,61.60
 Add-on 1,,,,,,,,,,,,,,4.13
 Add-on 2,,,,,,,,,,,,,,5.50
 Not fitted by default,,,,,,,,,,,,,,1.67
-Spares,,,,,,,,,,,,,,22.06
-Whole order,,,,,,,,,,,,,,94.96
+Spares,,,,,,,,,,,,,,22.70
+Whole order,,,,,,,,,,,,,,95.60
 
 By supplier (incl. spares and parts not fitted by default)
-EKOM,,,,,,,,,,,,,,61.40
-Ozdisan,,,,,,,,,,,,,,2.36
+EKOM,,,,,,,,,,,,,,61.64
+Ozdisan,,,,,,,,,,,,,,2.76
 Mouser,,,,,,,,,,,,,,31.20
