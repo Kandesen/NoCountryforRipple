@@ -8,13 +8,13 @@ Open the files with LTspice 24 or later. The LTC7801 symbol and model ship with 
 
 | File | What it simulates | Main results (22 Nov 2026 runs) |
 |---|---|---|
-| `01_powerstage_ideal.asc` (`.cir`: same circuit as a netlist) | Step 1: ideal switches at a fixed duty cycle, 20/24/36/48 V | ΔiL 1.09–2.06 A, peak 5.55–6.03 A, ripple 13.0–24.7 mV (matches `calc/design_calc.m`) |
-| `closed_loop.asc` | Step 2: full closed loop with BSC117N08NS5 models; soft start, then a 5 A → 2.5 A → 5 A load step at 20/24/36/48 V | 11.996 V, ripple 14.4–24.6 mV, step +194/−185 mV worst case, start-up overshoot ≤ 68 mV, fsw 202 kHz |
+| `01_powerstage_ideal.asc` (`.cir`: same circuit as a netlist) | Step 1: ideal switches at a fixed duty cycle, 20/24/36/48 V | ΔiL 1.09–2.06 A, peak 5.55–6.03 A, ripple 13.8–26.2 mV (matches `calc/design_calc.m`) |
+| `closed_loop.asc` | Step 2: full closed loop with BSC117N08NS5 models; soft start, then a 5 A → 2.5 A → 5 A load step at 20/24/36/48 V | 11.996 V, ripple 14.5–26.3 mV, step +193/−183 mV worst case, start-up overshoot ≤ 66 mV, fsw 202 kHz |
 | `current_limit.asc` | Load sequence 2.4 Ω → 1.6 Ω → 0.5 Ω → short → 2.4 Ω at 24 V; steps `CCLOOP = 0` (add-on not fitted) and `1` (fitted) | With the add-on (R28 = 2.49 kΩ, 8.26 A set point): 7.50 A at 1.6 Ω in regulation (12.00 V), 8.25 A from 0.5 Ω down to a dead short (also at 48 V), then recovery to 12.00 V, max 12.04 V |
-| `hiccup_no_addon.asc` | Base converter only: 1.6 Ω overload, a 14 ms short, then 2.4 Ω, at 24 V | 7.50 A at 1.6 Ω in regulation; hiccup in the short (2.54 A average, 15.3 A peak); soft-start recovery, max 12.06 V |
+| `hiccup_no_addon.asc` | Base converter only: 1.6 Ω overload, a 14 ms short, then 2.4 Ω, at 24 V | 7.50 A at 1.6 Ω in regulation; hiccup in the short (2.54 A average, 15.2 A peak); soft-start recovery, max 12.06 V |
 | `04_reverse_polarity.asc` (`.cir`: same circuit) | Reverse-polarity MOSFET Q3 (BSC030N08NS5) at +48, −48, +20 and −20 V | VDS −4.1 mV at +48 V and −1.7 mV at +20 V, VGS 11.9 V; input blocked when reversed |
 
-C1 is the 82 µF / 63 V polymer capacitor (KEMET A786MN826M1JLAS018, 18 mΩ) in every LTspice file and in `03`/`04`; all LTspice results above were re-run with it on 22 Nov 2026. Only the earlier cross-check `02_closed_loop.cir` still models the previous 100 µF electrolytic.
+C1 is the 82 µF / 63 V polymer capacitor (KEMET A786MN826M1JLAS018, 18 mΩ) and C10 the 100 µF / 25 V polymer capacitor (KEMET A768EB107M1ELAS036, 36 mΩ) in every LTspice file; all LTspice results above were re-run with them on 22 Nov 2026. The earlier ngspice cross-checks were not re-run for C10 (`02_closed_loop.cir` also still models the previous 100 µF input electrolytic).
 
 To change the input voltage, edit the `.step param Vin` line (or `.param Vin` in `current_limit.asc` and `hiccup_no_addon.asc`).
 The closed-loop `.asc` files save every node, so the waveform files are large (up to about 1 GB per run). Add a line such as `.save V(out) I(L1) V(SW)` if disk space is short.

@@ -53,10 +53,10 @@
   short-circuit current (foldback, datasheet formula) ~ 5.5 A
 
 === 6. Output / input ripple ===
-  Vin = 20 V  dI = 1.09 A  Vout ripple ~  15.2 mV pp (limit 120)  Vin ripple (ceramic only) ~ 1.00 V pp
-  Vin = 24 V  dI = 1.36 A  Vout ripple ~  19.0 mV pp (limit 120)  Vin ripple (ceramic only) ~ 1.04 V pp
-  Vin = 36 V  dI = 1.82 A  Vout ripple ~  25.3 mV pp (limit 120)  Vin ripple (ceramic only) ~ 0.93 V pp
-  Vin = 48 V  dI = 2.05 A  Vout ripple ~  28.5 mV pp (limit 120)  Vin ripple (ceramic only) ~ 0.78 V pp
+  Vin = 20 V  dI = 1.09 A  Vout ripple ~  17.6 mV pp (limit 120)  Vin ripple (ceramic only) ~ 1.00 V pp
+  Vin = 24 V  dI = 1.36 A  Vout ripple ~  22.0 mV pp (limit 120)  Vin ripple (ceramic only) ~ 1.04 V pp
+  Vin = 36 V  dI = 1.82 A  Vout ripple ~  29.3 mV pp (limit 120)  Vin ripple (ceramic only) ~ 0.93 V pp
+  Vin = 48 V  dI = 2.05 A  Vout ripple ~  33.0 mV pp (limit 120)  Vin ripple (ceramic only) ~ 0.78 V pp
 
 === 7. Component stresses ===
   MOSFET VDS: 48 V + 25 % ringing = 60 V vs 80 V rating

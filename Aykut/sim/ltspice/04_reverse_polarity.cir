@@ -6,11 +6,11 @@
 V1    IN VIN_N {VIN} Rser=30m
 MQ3   VIN_N Q3_G 0 0 BSC030N08NS5
 R1    IN Q3_G 100k
-D1    0 Q3_G BZT52B12
+D1    0 Q3_G BZT52C12
 C2_12 IN 0 6u Rser=2m
 C1    IN 0 82u Rser=18m
 Rconv IN 0 37
-.model BZT52B12 D(Is=1e-12 N=1 BV=12 IBV=5m Rs=5)
+.model BZT52C12 D(Is=1e-12 N=1 BV=12 IBV=5m Rs=5)
 .model BSC030N08NS5 VDMOS(Rg=1.6 Rd=2.4m Rs=0.3m Vto=3.0 Kp=250 Lambda=0.01 Cgdmax=1.4n Cgdmin=40p A=0.5 Cgs=4n
 + Cjo=5n VJ=0.7 M=0.5 Is=1p N=1.05 Rb=1.5m TT=10n BV=80 mfg=Infineon Vds=80 Ron=3m)
 .tran 0 3m 0 1u

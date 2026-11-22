@@ -1,6 +1,6 @@
 * EE463 60 W sync buck - Step 4: input reverse-polarity protection (optional add-on 1), ngspice cross-check
 * Q3 (BSC030N08NS5): drain -> VIN- terminal, source -> circuit ground,
-* gate -> VIN+ through R1 (100 k), D1 12 V Zener gate clamp (BZT52B12). Bypass footprint JP1 (0 ohm) not fitted.
+* gate -> VIN+ through R1 (100 k), D1 12 V Zener gate clamp (BZT52C12). Bypass footprint JP1 (0 ohm) not fitted.
 * The converter is represented by its input capacitors and an equivalent 60 W load at 48 V (37 ohm).
 * VIN = +48 V (normal) or -48 V (reversed); change .param VIN.
 .param VIN=48

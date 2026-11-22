@@ -35,7 +35,7 @@ P.L = 22e-6;  P.DCR = 7e-3;  P.kCu = 1.24;  P.Isat = 18;
 P.Rsense = 6e-3;
 P.CinCer = 6*1.0e-6;  P.EsrCin  = 3e-3/6;     % 6 x 2.2 uF / 100 V X7R 1210 (DC-bias derated)
 P.CoCer  = 4*10e-6;   P.EsrCoC  = 3e-3/4;     % 4 x 22 uF / 25 V X7R 1210 (DC-bias derated)
-P.CoPoly = 100e-6;    P.EsrPoly = 25e-3;      % 1 x 100 uF / 25 V polymer
+P.CoPoly = 100e-6;    P.EsrPoly = 36e-3;      % 1 x 100 uF / 25 V polymer (KEMET A768EB107M1ELAS036)
 P.Rconn = 2e-3;  P.RpcbIn = 1.5e-3;  P.RpcbOut = 2.0e-3;
 P.Ruvlo = 1.1e6;  P.RrpGate = 100e3;  P.VrpZ = 12;
 P.Pcc = 1.2e-3*12;                             % optional current-limit circuit

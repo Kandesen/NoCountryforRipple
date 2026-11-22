@@ -13,7 +13,7 @@ SQ2  SW 0 PWMN 0 SWI
 L1   SW SNSP 22u Rser=7m
 R5   SNSP OUT 6m
 C6_9 OUT 0 40u Rser=0.75m
-C10  OUT 0 100u Rser=30m
+C10  OUT 0 100u Rser=36m
 Rload OUT 0 2.4
 .ic V(OUT)=12 I(L1)=5
 .tran 0 8m 7.5m 5n uic

@@ -30,15 +30,15 @@ Every part has `MPN`, `Manufacturer` and `Fit`. `Fit` is one of: Base, Add-on 1 
 - **What the BOM orders:** every part, including the ones not fitted by default (D3, JP1, R4, C13, R11), plus a limited set of spares that keeps the order under the 100 USD budget. "Qty per board" is the fitted quantity, "Spares" the extra pieces and "Qty to order" their sum.
 - **Spares and why:** one LTC7801 (hardest part to hand-solder without a stencil, longest lead time); one BSC117N08NS5 (Q1/Q2 are the most likely to fail during bring-up); one LM2904B and one 1N4148W (cheap); one of every 0805 resistor and capacitor in a fitted position, once per part number (easily lost when hand-soldering). No spares for L1, R5, the 1206/1210 capacitors, C1, C10, Q3, U2, U4 or the parts not fitted by default.
 - **Cost of the order (single-unit prices, USD excl. VAT):** base 61.6, add-on 1 4.1, add-on 2 5.5, parts not fitted by default 1.7, spares 21.6, total about 94.5. By supplier: EKOM 61.2, Özdisan 2.2 (estimated with Mouser prices; Royalohm resistors are sold in 100s), Mouser 31.2. Quantity breaks make the real total a little lower, but EKOM's USD prices follow the exchange rate, so recheck the total on the order day.
-- **Equivalents ordered instead of the design part** (same footprint and pinout):
-  - C10: KEMET A768EB107M1ELAS036 (100 µF 25 V polymer, 6.3 mm can, 36 mΩ, AEC-Q200) instead of Panasonic EEH-ZA1E101XP (not listed).
-  - C15: KEMET C0805C104K1RACTU; C20: KEMET C0805C682K5RACTU (the Yageo parts are not listed).
-  - U2: INA180A1IDBVT (same IC, industrial grade). U4: TLV431BCDBZR (0–70 °C grade, same accuracy and pinout). D1: Taiwan Semiconductor BZT52C12-G RHG (12 V, 5 %, SOD-123).
-  - J1/J2 plug: Phoenix 1765551 (MSTB 2,5/2-ST-5,08 AU, same series as the 1757019, which EKOM only quotes). The header 1757242 is stocked.
-  - From Özdisan: Royalohm 0805S8F2372T5E for R14 (23.7 kΩ), sold in 100s.
+- **Every MPN in the schematic and BOM is the part that is ordered** (the "Order part" column says "same part" on every line). To get there, these design parts were replaced on 22 Nov 2026 by equivalents that EKOM/Özdisan stock (same footprint, pinout and rating):
+  - C10: KEMET A768EB107M1ELAS036 (100 µF 25 V polymer, 6.3 mm can, 36 mΩ, 1.26 A ripple) instead of Panasonic EEH-ZA1E101XP.
+  - C15: KEMET C0805C104K1RACTU; C20: KEMET C0805C682K5RACTU (instead of Yageo CC0805 parts).
+  - U2: INA180A1IDBVT (same IC, industrial grade) instead of INA180A1QDBVRQ1. U4: TLV431BCDBZR (0–70 °C grade, same accuracy and pinout) instead of TLV431BIDBZR. D1: Taiwan Semiconductor BZT52C12-G RHG (12 V, 5 %) instead of Comchip BZT52B12-HF.
+  - J1/J2 plug: Phoenix 1765551 (MSTB 2,5/2-ST-5,08 AU, same series) instead of 1757019, which EKOM only quotes. The header 1757242 is unchanged.
+  - R14: Royalohm 0805S8F2372T5E from Özdisan (sold in 100s) instead of Yageo RC0805FR-0723K7L. R4 (not fitted): Yageo RC1206JR-072R2L (5 %) instead of the 1 % part.
 - **From Mouser (mouser.com.tr):** U1 LTC7801EFE#PBF × 2 (EKOM lists only the LTC7801IFE#PBF, on request; Mouser Türkiye had 1,587), R12 1.02 MΩ, D3 BAT46ZFILM (no BAT46 in stock at EKOM) and JP1 CRF2512-J/-000ELF.
 - **L1 (Würth 74435582200):** EKOM 101 (Digi-Key stock), 9.18 USD; Mouser 0 (3,543 due 11 Dec 2026). Order it first.
-- **Parts not fitted by default** are ordered too: R4 (EKOM Yageo RC1206JR-072R2L, 5 %), C13 and R11 (EKOM), D3 and JP1 (Mouser). EKOM's Bourns CRF2512-JZ-R005ELF (5 mΩ metal strip) would also work for JP1 (48 mW at 3.1 A).
+- **Parts not fitted by default** are ordered too: R4, C13 and R11 (EKOM), D3 and JP1 (Mouser). EKOM's Bourns CRF2512-JZ-R005ELF (5 mΩ metal strip) would also work for JP1 (48 mW at 3.1 A).
 - Earlier swaps re-checked at EKOM: Murata GRM32ER72A225KA35L, Samsung CL32B226KAJNNNE / CL31B106KAHNNNE / CL21B104KCFNNNE and BAT46W-7-F are out of stock there; Yageo RC2512JK-070RL is stocked but rated 2 A (too low for JP1); INA180B1IDBVR is stocked but has the other pinout. None of the earlier swaps needs to be undone.
 
 ## What has been verified
