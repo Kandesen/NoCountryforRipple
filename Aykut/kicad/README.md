@@ -9,7 +9,7 @@ Open `NoCountryforRipple_Buck.kicad_pro` in KiCad 10. The files were generated w
 | `lib/NCFR.kicad_sym` | Project symbols: `LTC7801` and `TLV431_DBZ` |
 | `lib/NCFR.pretty/LTC7801_FE24_AA.kicad_mod` | LTC7801 TSSOP-24 footprint with exposed pad (FE24 AA: EP 2.74 × 3.25 mm, 6 thermal vias) |
 | `bom/BOM_NoCountryforRipple_Buck.csv` | BOM grouped by MPN, with fit status and Digi-Key/Mouser search links |
-| `docs/` | Schematic PDF and layer plots |
+| `docs/` | Schematic PDF, layer plots and `assembly_top.pdf` (part outlines with every reference, A4, for hand assembly) |
 
 ## Symbol fields
 Every part has `MPN`, `Manufacturer` and `Fit`. `Fit` is one of: Base, Add-on 1 (reverse polarity), Add-on 2 (current limit), or a DNP option. DNP parts carry KiCad's *Do not populate* flag.
@@ -21,8 +21,8 @@ Every part has `MPN`, `Manufacturer` and `Fit`. `Fit` is one of: Base, Add-on 1 
 - **Rules:** minimum clearance 0.2 mm, minimum track 0.2 mm, vias 0.6/0.3 mm, 0.5 mm to the board edge. Every part is on the top side; there is no stencil, so paste is applied with the dispenser.
 - **Power copper (F.Cu zones):** VIN, VIN_N (reverse-polarity FET), SW, SNSP (L1 → R5) and VOUT. The six input ceramics sit on the VIN/GND boundary directly above Q1 and Q2 (hot loop about 10 × 8 mm over the solid In1 GND).
 - **Current sense:** Kelvin traces from inside the R5 pads run on In2 to R6/R7 (LTC7801 SENSE± filter) and on B.Cu to U2 (INA180).
-- **Gate drive:** U1 → R2/R3 (0 Ω, change to a few Ω to slow the edges) → vias next to the Q1/Q2 gate pads.
-- **DRC (KiCad 7):** no clearance errors, no unconnected items. Remaining items: silkscreen overlaps (cosmetic), two "starved thermal" warnings on pads that also have their own via, and "library footprint" notices that only appear because the generator did not have your library paths.
+- **Gate drive:** U1 → R2/R3 (0 Ω, change to a few Ω to slow the edges) → vias next to the Q1/Q2 gate pads. R2 sits directly above the gate-driver pins and R3 on the direct line towards Q2; test points TP4 (TG) and TP5 (BG) are next to them. Controller pin to MOSFET gate: TG about 29 mm (the straight line is 22 mm, because Q1 is at the far end of the power stage), BG about 21 mm. The TG track runs on In2 next to its SW return for most of its length. D3 (optional bootstrap diode, not fitted) was moved above the controller to make room for R3.
+- **DRC (KiCad 7):** no clearance errors, no unconnected items. No silkscreen overlaps. The only remaining items are "library footprint" notices that only appear because the generator did not have your library paths.
 
 ## What has been verified
 - **Schematic ↔ intended design:** KiCad's exported netlist was compared pin by pin with the intended netlist (191 pins, no differences). The intended netlist was reviewed net by net against the design.
@@ -39,8 +39,9 @@ Every part has `MPN`, `Manufacturer` and `Fit`. `Fit` is one of: Base, Add-on 1 
 - **Cost:** about 48 USD for one fully populated board at single-unit prices (Base 41, add-on 1 4, add-on 2 3); see the BOM totals.
 
 ## Known points to improve or check interactively
-- **Gate-drive traces are 20–25 mm** from R2/R3 to the FET gates, because the controller sits to the right of the power stage. They run on In2/B.Cu between GND planes. If ringing shows up on the bench, increase R2/R3 to 2.2–4.7 Ω, fit the R4/C13 snubber, or shorten the loops by routing TG_G and the SW return as a pair.
-- **Silkscreen:** some reference labels overlap in the dense controller area. This is cosmetic: move them in KiCad.
+- **Gate drive and ringing:** the gate paths were shortened on 22 Nov (TG about 34 → 29 mm, BG 28 → 21 mm). If the switch node rings too much on the bench (TP3, 48 V, full load), first increase R2/R3 to 2.2–4.7 Ω, then fit the R4/C13 snubber (2.2 Ω, 330 pF C0G; R4 dissipates about 0.15 W at 48 V).
+- **DRVCC capacitor C16** is about 10 mm of track from U1 pin 17. The datasheet asks for it right next to the pin, because it supplies the gate-driver current pulses. Moving it closer means rearranging the capacitor column left of U1 (C15–C18, C22); this is the next layout improvement before the 30 Nov submission.
+- **Silkscreen:** every label is placed clear of pads and other labels. Five small parts next to the controller (C19, C20, C21, C28, R19) had no free space for a label, so their labels are hidden on the board; `docs/assembly_top.pdf` shows all references.
 - **Vias in the R5 pads:** the Kelvin vias sit inside R5's pads, so a little solder may wick into them. Use enough paste on R5.
 
 ## Before ordering (in KiCad 10)

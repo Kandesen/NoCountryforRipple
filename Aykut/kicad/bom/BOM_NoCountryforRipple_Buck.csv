@@ -44,7 +44,7 @@ R28,1,1.54k,,R_0805_2012Metric,Yageo,RC0805FR-071K54L,Add-on 2,Yes,0.05,0.05,htt
 U2,1,INA180A1,,SOT-23-5,Texas Instruments,INA180A1IDBVR,Add-on 2,Yes,1.00,1.00,https://www.digikey.com/en/products/result?keywords=INA180A1IDBVR,https://www.mouser.com/c/?q=INA180A1IDBVR,
 U3,1,LM2904B,,SOIC-8_3.9x4.9mm_P1.27mm,Texas Instruments,LM2904BIDR,Add-on 2,Yes,0.50,0.50,https://www.digikey.com/en/products/result?keywords=LM2904BIDR,https://www.mouser.com/c/?q=LM2904BIDR,
 U4,1,TLV431B,,SOT-23,Texas Instruments,TLV431BIDBZR,Add-on 2,Yes,0.40,0.40,https://www.digikey.com/en/products/result?keywords=TLV431BIDBZR,https://www.mouser.com/c/?q=TLV431BIDBZR,4.97 V rail
-C13,1,1n/100V,,C_0805_2012Metric,Murata,GRM2165C2A102JA01D,DNP (snubber option),No (DNP),0.10,0.10,https://www.digikey.com/en/products/result?keywords=GRM2165C2A102JA01D,https://www.mouser.com/c/?q=GRM2165C2A102JA01D,
+C13,1,330p/100V,,C_0805_2012Metric,KEMET,C0805C331J1GACTU,DNP (snubber option),No (DNP),0.13,0.13,https://www.digikey.com/en/products/result?keywords=C0805C331J1GACTU,https://www.mouser.com/c/?q=C0805C331J1GACTU,
 D3,1,BAT46W,,D_SOD-123,Diodes Inc.,BAT46W-7-F,DNP (ext. boost diode),No (DNP),0.20,0.20,https://www.digikey.com/en/products/result?keywords=BAT46W-7-F,https://www.mouser.com/c/?q=BAT46W-7-F,
 JP1,1,0R,,R_2512_6332Metric,Yageo,RC2512JK-070RL,Fit only without add-on 1,No (DNP),0.30,0.30,https://www.digikey.com/en/products/result?keywords=RC2512JK-070RL,https://www.mouser.com/c/?q=RC2512JK-070RL,
 R4,1,2.2R,,R_1206_3216Metric,Yageo,RC1206FR-072R2L,DNP (snubber option),No (DNP),0.10,0.10,https://www.digikey.com/en/products/result?keywords=RC1206FR-072R2L,https://www.mouser.com/c/?q=RC1206FR-072R2L,

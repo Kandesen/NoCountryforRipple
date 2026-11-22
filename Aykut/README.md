@@ -64,6 +64,8 @@ Group repo: NoCountryforRipple · Folder owner: Aykut
 | 2026-11-22 | INA180 supply taken from the TLV431 rail through R20 = 100 Ω, with its 100 nF bypass after R20 | TI only guarantees TLV431 stability with no load capacitor. The resistor isolates the bypass capacitor from the shunt regulator. |
 | 2026-11-22 | Layout options: 0 Ω gate resistors R2/R3, snubber footprint R4/C13 (DNP), external boost diode D3 (DNP), EXTVCC fallback R11 (DNP) | Switching speed, ringing and bias supply can be tuned on the bench without a new board. |
 | 2026-11-22 | Removed the feed-forward capacitor footprint and the ITH/FB test points | They added copper stubs to high-impedance nodes. ITH and FB can be probed at C21 and R9. |
+| 2026-11-22 | Snubber starting values 2.2 Ω (1206) + 330 pF C0G 100 V (KEMET C0805C331J1GACTU), still not fitted by default | The planned 1 nF would put C·Vin²·fsw ≈ 0.46 W into R4 at 48 V, above the 1206 rating (0.25 W). With 330 pF it is about 0.15 W. |
+| 2026-11-22 | Gate drive re-routed: R2 directly above the driver pins, R3 on the direct line to Q2, D3 (not fitted) moved above the controller, TP4/TP5 next to R2/R3 | Controller pin to gate: TG about 34 → 29 mm (straight line 22 mm), BG 28 → 21 mm. The TG track runs next to its SW return. DRC still clean. |
 
 ## Folder layout
 
