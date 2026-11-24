@@ -1,0 +1,16 @@
+# Review runs 2026-11-24: keep the inputs, results summary, KiCad reports and PNG screenshots;
+# ignore generated and scratch files (sim/.gitignore already ignores *.raw, *.log, *.net, *.op.raw, *.plt).
+kicad_copy/
+*.raw
+*.db
+*.net
+*.emf
+done_*.txt
+kicad_checks_status.txt
+# void run: LTspice treats a node named "gnd" as ground, so Q3 was bypassed (hotplug2.cir is the valid one)
+hotplug.cir
+# unused launchers (simulations were run from the LTspice window instead)
+run_all.bat
+chain.bat
+clipwatch.ps1
+start_screenshot_saver.bat

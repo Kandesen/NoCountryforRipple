@@ -1,0 +1,24 @@
+* EE463 hot-plug check (review 2026-11-24, Claude): board plugged into a supply already at 48 V
+* v2: circuit-ground node renamed to cgnd (LTspice treats a node named GND as ground)
+* Supply leads Lw/Rw stepped; Q3 fitted (BSC030N08NS5 model and gate drive as in 04_reverse_polarity.asc);
+* converter not yet switching (RUN/soft start take ms, the peak occurs in ~30 us), represented by C2-C5, C11, C12 and C1.
+.param Lw=1u Rw=50m
+V1 vs 0 PWL(0 0 1u 48)
+Llead vs vl {Lw}
+Rlead vl vpos {Rw}
+* supply return (VIN- terminal) = node 0; circuit ground = node cgnd; Q3 drain at VIN-, source at cgnd
+MQ3 0 g cgnd BSC030
+R1 vpos g 100k
+D1 cgnd g DZ12
+Rdc cgnd 0 1G
+C2_12 vpos cgnd 6u Rser=2m
+C1 vpos cgnd 82u Rser=18m
+Rconv vpos cgnd 10k
+.model DZ12 D(Is=1e-12 N=1 BV=12 IBV=5m Rs=5)
+.model BSC030 VDMOS(Rg=1.6 Rd=2.4m Rs=0.3m Vto=3.0 Kp=250 Lambda=0.01 Cgdmax=1.4n Cgdmin=40p a=0.5 Cgs=4n Cjo=5n Vj=0.7 M=0.5 Is=1e-12 N=1.05 Rb=1.5m TT=10n BV=80)
+.step param Lw list 0.5u 1u 2u
+.step param Rw list 20m 50m 100m
+.tran 0 300u 0 20n
+.meas tran VC1_peak MAX V(vpos,cgnd)
+.meas tran Iin_peak MAX I(Llead)
+.end

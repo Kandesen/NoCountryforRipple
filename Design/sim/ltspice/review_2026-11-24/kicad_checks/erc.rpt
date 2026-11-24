@@ -1,0 +1,21 @@
+ERC report (2026-11-24T20:21:13, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[lib_symbol_mismatch]: Symbol 'BSC040N08NS5' doesn't match copy in library 'Transistor_FET'
+    ; warning
+    @(48.26 mm, 66.04 mm): Symbol Q3 [BSC040N08NS5]
+[lib_symbol_mismatch]: Symbol 'BSC117N08NS5' doesn't match copy in library 'Transistor_FET'
+    ; warning
+    @(154.94 mm, 53.34 mm): Symbol Q1 [BSC117N08NS5]
+[lib_symbol_mismatch]: Symbol 'BSC117N08NS5' doesn't match copy in library 'Transistor_FET'
+    ; warning
+    @(154.94 mm, 78.74 mm): Symbol Q2 [BSC117N08NS5]
+
+ ** ERC messages: 3  Errors 0  Warnings 3
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

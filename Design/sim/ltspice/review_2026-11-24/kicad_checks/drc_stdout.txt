@@ -1,0 +1,8 @@
+Found 60 violations
+Found 0 unconnected items
+Found 174 schematic parity issues
+Saved DRC Report to kicad_checks/drc.rpt
+Found 60 violations
+Found 0 unconnected items
+Found 174 schematic parity issues
+Saved DRC Report to kicad_checks/drc.json

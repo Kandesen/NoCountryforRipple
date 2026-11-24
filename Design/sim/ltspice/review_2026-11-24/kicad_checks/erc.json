@@ -1,0 +1,83 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-24T20:21:19",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.8",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/2cdb9680-5bee-5b21-94c9-497b9ce555bb",
+            "violations": [
+                {
+                    "description": "Symbol 'BSC040N08NS5' doesn't match copy in library 'Transistor_FET'",
+                    "items": [
+                        {
+                            "description": "Symbol Q3 [BSC040N08NS5]",
+                            "pos": {
+                                "x": 48.26,
+                                "y": 66.04
+                            },
+                            "uuid": "2ff76caa-b223-509f-a917-5d43773a43ed"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'BSC117N08NS5' doesn't match copy in library 'Transistor_FET'",
+                    "items": [
+                        {
+                            "description": "Symbol Q1 [BSC117N08NS5]",
+                            "pos": {
+                                "x": 154.94,
+                                "y": 53.34
+                            },
+                            "uuid": "f62f971a-0080-5751-9bfd-4aa8124847c6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'BSC117N08NS5' doesn't match copy in library 'Transistor_FET'",
+                    "items": [
+                        {
+                            "description": "Symbol Q2 [BSC117N08NS5]",
+                            "pos": {
+                                "x": 154.94,
+                                "y": 78.74
+                            },
+                            "uuid": "173f3a03-e169-5b6d-baa3-e2eb384f34c5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                }
+            ]
+        }
+    ],
+    "source": "NoCountryforRipple_Buck.kicad_sch"
+}

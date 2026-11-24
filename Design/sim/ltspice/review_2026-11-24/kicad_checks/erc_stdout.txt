@@ -1,0 +1,4 @@
+Found 3 violations
+Saved ERC Report to kicad_checks/erc.rpt
+Found 3 violations
+Saved ERC Report to kicad_checks/erc.json
