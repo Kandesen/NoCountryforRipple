@@ -1,14 +1,14 @@
 === 1. Switching-frequency sweep (L = 22 uH, 5 A) ===
-  f = 150 kHz  avg eta =  97.50 %  bonus = 17.50  dI@48V = 2.73 A (55 %)
-  f = 200 kHz  avg eta =  97.30 %  bonus = 17.30  dI@48V = 2.05 A (41 %)
-  f = 250 kHz  avg eta =  97.08 %  bonus = 17.08  dI@48V = 1.64 A (33 %)
-  f = 300 kHz  avg eta =  96.85 %  bonus = 16.85  dI@48V = 1.36 A (27 %)
-  f = 350 kHz  avg eta =  96.62 %  bonus = 16.62  dI@48V = 1.17 A (23 %)
-  f = 400 kHz  avg eta =  96.38 %  bonus = 16.38  dI@48V = 1.02 A (20 %)
+  f = 150 kHz  avg eta =  96.80 %  bonus = 16.80  dI@48V = 2.73 A (55 %)
+  f = 200 kHz  avg eta =  96.74 %  bonus = 16.74  dI@48V = 2.05 A (41 %)
+  f = 250 kHz  avg eta =  96.61 %  bonus = 16.61  dI@48V = 1.64 A (33 %)
+  f = 300 kHz  avg eta =  96.44 %  bonus = 16.44  dI@48V = 1.36 A (27 %)
+  f = 350 kHz  avg eta =  96.25 %  bonus = 16.25  dI@48V = 1.17 A (23 %)
+  f = 400 kHz  avg eta =  96.05 %  bonus = 16.05  dI@48V = 1.02 A (20 %)
 
 === 2. Low-side MOSFET choice at 200 kHz ===
-  LS = BSC117N08NS5: avg eta 5 A = 97.30 %, 7.5 A = 96.78 %
-  LS = BSC040N08NS5: avg eta 5 A = 97.20 %, 7.5 A = 96.88 %
+  LS = BSC117N08NS5: avg eta 5 A = 96.74 %, 7.5 A = 96.41 %
+  LS = BSC040N08NS5: avg eta 5 A = 96.64 %, 7.5 A = 96.50 %
 
 === 3. Operating points (f = 200 kHz, 5 A) ===
                                            20 V       24 V       36 V       48 V
@@ -17,7 +17,7 @@
   inductor peak [A]                       5.545      5.682      5.909      6.023
   inductor RMS [A]                        5.010      5.015      5.027      5.035
   input-cap RMS [A]                       2.462      2.515      2.376      2.185
-  input current [A]                       3.073      2.563      1.715      1.291
+  input current [A]                       3.082      2.574      1.727      1.302
   --- losses [W] ---
   HS conduction                           0.210      0.175      0.117      0.088
   HS switching (V-I overlap)              0.126      0.151      0.224      0.297
@@ -28,24 +28,24 @@
   Gate drive                              0.067      0.067      0.067      0.067
   Controller bias                         0.030      0.030      0.030      0.030
   Inductor DCR                            0.218      0.218      0.219      0.220
-  Inductor core (estimate)                0.027      0.047      0.097      0.130
+  Inductor AC (REDEXPERT fit)             0.207      0.315      0.542      0.677
   Sense resistor                          0.151      0.151      0.152      0.152
   Cin + Cout ESR                          0.003      0.003      0.003      0.003
   Output connector + copper               0.150      0.150      0.150      0.150
   UVLO/OVLO divider                       0.000      0.001      0.001      0.002
   Current-limit circuit (optional)        0.014      0.014      0.014      0.014
   Input connector + copper                0.052      0.036      0.016      0.009
-  Reverse-polarity FET (optional)         0.031      0.023      0.018      0.022
-  TOTAL                                   1.456      1.514      1.728      1.958
-  Efficiency [%]                          97.63      97.54      97.20      96.84
-  average efficiency = 97.30 %  ->  efficiency bonus ~ +17.3 points
-  (base converter without the two optional add-ons: 97.36 %)
+  Reverse-polarity FET (optional)         0.031      0.024      0.018      0.023
+  TOTAL                                   1.637      1.783      2.174      2.505
+  Efficiency [%]                          97.34      97.11      96.50      95.99
+  average efficiency = 96.74 %  ->  efficiency bonus ~ +16.7 points
+  (base converter without the two optional add-ons: 96.80 %)
 
 === 4. Overload 7.5 A (f = 200 kHz) ===
-  Vin = 20 V  eta = 97.01 %  Ploss = 2.78 W  Ipk = 8.05 A  Iin = 4.64 A
-  Vin = 24 V  eta = 96.96 %  Ploss = 2.82 W  Ipk = 8.18 A  Iin = 3.87 A
-  Vin = 36 V  eta = 96.72 %  Ploss = 3.05 W  Ipk = 8.41 A  Iin = 2.58 A
-  Vin = 48 V  eta = 96.44 %  Ploss = 3.32 W  Ipk = 8.52 A  Iin = 1.94 A
+  Vin = 20 V  eta = 96.82 %  Ploss = 2.96 W  Ipk = 8.05 A  Iin = 4.65 A
+  Vin = 24 V  eta = 96.68 %  Ploss = 3.09 W  Ipk = 8.18 A  Iin = 3.88 A
+  Vin = 36 V  eta = 96.26 %  Ploss = 3.50 W  Ipk = 8.41 A  Iin = 2.60 A
+  Vin = 48 V  eta = 95.88 %  Ploss = 3.87 W  Ipk = 8.52 A  Iin = 1.96 A
 
 === 5. Current sensing / built-in limit ===
   RSENSE(max) for 7.5 A = 7.74 mOhm -> chosen 6 mOhm
@@ -62,7 +62,7 @@
   MOSFET VDS: 48 V + 25 % ringing = 60 V vs 80 V rating
   Inductor at 7.5 A, 48 V: Ipk = 8.52 A, Irms = 7.52 A (rated 15 A, Isat 18 A)
   Cin RMS current (D = 0.5): 2.50 A at 5 A, 3.75 A at 7.5 A
-  Input current at 20 V: 3.07 A (5 A out), 4.64 A (7.5 A out)
+  Input current at 20 V: 3.08 A (5 A out), 4.65 A (7.5 A out)
 
 === 8. MOSFET junction temperatures (RthJA ~ 40 K/W, Ta = 30 C) ===
   Io = 5.0 A, Vin = 20 V: P_HS = 0.41 W (Tj ~ 46 C), P_LS = 0.22 W (Tj ~ 39 C)
@@ -86,7 +86,7 @@
   injection to pull VOUT to 0 V: 86 uA -> R_inj <= 83 k (22 k chosen)
 
 === 12. Reverse-polarity MOSFET (low side, BSC030N08NS5) ===
-  Vin = 20 V: Iin = 3.07 A, P = 31 mW
-  Vin = 24 V: Iin = 2.56 A, P = 23 mW
-  Vin = 36 V: Iin = 1.71 A, P = 18 mW
-  Vin = 48 V: Iin = 1.29 A, P = 22 mW
+  Vin = 20 V: Iin = 3.08 A, P = 31 mW
+  Vin = 24 V: Iin = 2.57 A, P = 24 mW
+  Vin = 36 V: Iin = 1.73 A, P = 18 mW
+  Vin = 48 V: Iin = 1.30 A, P = 23 mW

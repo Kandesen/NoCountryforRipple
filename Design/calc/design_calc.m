@@ -185,7 +185,7 @@ qrr  = Lw.qrrSpec*sqrt(max(ival,0.5)/Lw.qrrIf)*1.3;
 icin = io*sqrt(d*(1-d) + (dI/io)^2*d/12);
 names = {'HS conduction','HS switching (V-I overlap)','Coss (HS+LS)','LS reverse recovery', ...
          'LS conduction','Dead-time body diode','Gate drive','Controller bias','Inductor DCR', ...
-         'Inductor core (estimate)','Sense resistor','Cin + Cout ESR','Output connector + copper', ...
+         'Inductor AC (REDEXPERT fit)','Sense resistor','Cin + Cout ESR','Output connector + copper', ...
          'UVLO/OVLO divider'};
 Pl = [ irms2*d*H.rds*P.kHot, ...
        0.5*vin*(ival*tOn + ipk*tOff)*f, ...
@@ -226,9 +226,13 @@ for v = P.VinPts, r = losses(P, H, Lw, RP, v, io, f, addons); e = e + r.eta/4; e
 end
 
 function p = coreLoss(dI, f)
-% Rough ferrite core-loss estimate (refine with Wurth REDEXPERT):
-% 0.10 W at dI = 1.64 A, 250 kHz; Steinmetz alpha = 1.3, beta = 2.5
-p = 0.10*(dI/1.64)^2.5*(f/250e3)^1.3;
+% Inductor AC loss (core + AC winding) of the Wurth 74435582200, fitted to Wurth REDEXPERT
+% (Power Inductors, buck, sync, 12 V / 5 A, run 24 Nov 2026):
+%   200 kHz: 207 / 314 / 540 / 677 mW at Vin = 20 / 24 / 36 / 48 V
+%   48 V: 860 mW at 150 kHz, 483 mW at 300 kHz
+% Fit in terms of this model's ripple dI: p = 0.1756 W * dI^1.885 * (f/200 kHz)^1.056 (within 1 %).
+% REDEXPERT gives 5-10 % more AC loss at 7.5 A than at 5 A; that small bias effect is not modelled.
+p = 0.1756*dI^1.885*(f/200e3)^1.056;
 end
 
 function b = bonusPts(e)
